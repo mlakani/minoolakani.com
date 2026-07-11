@@ -1,0 +1,8 @@
+body{margin:0;font-family:Arial,sans-serif;background:#111;color:#eee;line-height:1.6}
+.hero{height:70vh;background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),#333 center/cover;display:flex;align-items:center;justify-content:center;text-align:center}
+.overlay h1{font-size:3rem;margin:0;color:#d4af37}
+.overlay p{font-size:1.2rem}
+.btn{display:inline-block;margin:10px;padding:12px 24px;background:#d4af37;color:#111;text-decoration:none;border-radius:6px;font-weight:bold}
+section{max-width:900px;margin:auto;padding:60px 20px}
+h2{color:#d4af37}
+footer{text-align:center;padding:30px;background:#000}
