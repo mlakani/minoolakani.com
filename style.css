@@ -20,3 +20,27 @@
 .contact{text-align:center}.contact .section-heading h2{margin-bottom:20px}.contact>p{margin:0 auto 35px}.contact .hero-actions{justify-content:center}footer{padding:55px 20px;display:flex;align-items:center;justify-content:center;gap:18px;border-top:1px solid var(--line);color:#a89d8d;font-size:.82rem}footer img{width:54px;height:54px;object-fit:cover;border-radius:8px}
 @media(max-width:1050px){.site-header{height:84px}.brand img{width:58px;height:58px}.brand strong{font-size:1.35rem}.nav{gap:20px}.hero{grid-template-columns:1fr;padding-top:110px;text-align:center}.hero-art-wrap{justify-content:center}.hero-art{max-height:50vh}.hero-copy{align-self:auto;justify-self:center;margin:-20px auto 45px}.hero-actions{justify-content:center}}
 @media(max-width:780px){.site-header{padding:0 18px}.brand span{display:none}.menu-toggle{display:block}.nav{position:absolute;top:84px;left:0;right:0;display:none;padding:24px;flex-direction:column;background:#050505;border-top:1px solid var(--line)}.nav.open{display:flex}.hero{min-height:auto;padding:110px 18px 78px}.hero-art{width:100%;max-height:none}.hero-copy{margin-top:-10px}.hero h1{font-size:clamp(3.2rem,15vw,5.2rem)}.tagline{font-size:1.08rem;letter-spacing:.08em}.button{width:100%;min-height:58px;padding:0 18px}.scroll-cue{display:none}.content-section{padding:78px 22px}.split{grid-template-columns:1fr;gap:5px}.feature-card{padding:32px;align-items:flex-start;flex-direction:column}.feature-card h3{font-size:2.7rem}.gallery-grid{grid-template-columns:1fr}.gallery-tile:nth-child(2){transform:none}footer{flex-direction:column;text-align:center}}
+
+/* Center the portrait and text together on desktop */
+@media (min-width: 1051px) {
+  .hero {
+    grid-template-columns: 400px minmax(520px, 650px);
+    justify-content: center;
+    column-gap: 35px;
+  }
+
+  .hero-art-wrap {
+    justify-content: flex-end;
+  }
+
+  .hero-art {
+    width: 400px;
+    max-height: 64vh;
+  }
+
+  .hero-copy {
+    justify-self: start;
+    align-self: center;
+    margin-bottom: 0;
+  }
+}
