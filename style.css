@@ -44,3 +44,19 @@
     margin-bottom: 0;
   }
 }
+/* Make Spotify and YouTube buttons about 50% smaller */
+.hero .button {
+  min-height: 38px;
+  padding: 0 16px;
+  font-size: 0.68rem;
+  gap: 7px;
+  border-radius: 5px;
+}
+
+.hero .hero-actions {
+  gap: 10px;
+}
+
+.hero .button-icon {
+  font-size: 0.75rem;
+}
