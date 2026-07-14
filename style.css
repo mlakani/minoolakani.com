@@ -164,14 +164,14 @@
 .platform-links {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 5px;
   flex-wrap: nowrap;
   margin-top: 4px;
 }
 
 .platform-logo-button {
-  width: 115px;
-  height: 38px;
+  width: 64px;
+  height: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -202,8 +202,9 @@
   }
 
   .platform-logo-button {
-    width: 96px;
-    height: 32px;
+  width: 58px;
+  height: 20px;
+}
   }
 }
 
