@@ -194,3 +194,19 @@ footer img{width:56px;height:56px;object-fit:cover;border:1px solid var(--gold);
     margin-bottom: 28px;
   }
 }
+
+/* Wider main frame — keep all existing content and menu */
+@media (min-width: 1001px) {
+  .site-header,
+  .poster {
+    width: min(96vw, 1460px);
+  }
+
+  .site-header {
+    margin: 12px auto 0;
+  }
+
+  .poster {
+    margin: 0 auto 12px;
+  }
+}
