@@ -1501,5 +1501,18 @@ a {
   width: 100%;
   max-width: 570px;
   padding-top: 30px;
+
+  /* CLICKABLE SONG LINKS */
+.song-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.song-link:focus-visible {
+  outline: 2px solid var(--soft-gold);
+  outline-offset: 6px;
+  border-radius: 11px;
+}
  
 ```
