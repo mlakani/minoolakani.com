@@ -210,3 +210,57 @@ footer img{width:56px;height:56px;object-fit:cover;border:1px solid var(--gold);
     margin: 0 auto 12px;
   }
 }
+
+/* Make the Now Streaming card wider, lower, and overlap the portrait area */
+@media (min-width: 1001px) {
+  .streaming-card {
+    position: relative;
+    z-index: 6;
+    width: 720px;
+    min-height: 340px;
+    padding: 28px 26px 26px;
+    margin-top: 36px;
+    margin-bottom: 8px;
+    transform: translateX(38px);
+  }
+
+  .streaming-card h2 {
+    font-size: 17px;
+    margin-bottom: 24px;
+  }
+
+  .streaming-inner {
+    gap: 28px;
+    align-items: center;
+  }
+
+  .streaming-inner img {
+    width: 255px;
+    border-radius: 18px;
+  }
+
+  .streaming-inner h3 {
+    font-size: 38px;
+    margin-bottom: 14px;
+  }
+
+  .streaming-inner p {
+    font-size: 16px;
+    margin-bottom: 26px;
+  }
+
+  .streaming-inner span {
+    padding: 14px 28px;
+    font-size: 14px;
+  }
+
+  .songs {
+    margin-top: -18px;
+    padding-top: 18px;
+  }
+
+  .songs-title {
+    margin-top: 0;
+    margin-bottom: 26px;
+  }
+}
