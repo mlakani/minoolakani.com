@@ -1,1 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
 
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="description"
+    content="Explore the complete music catalog of Minoo Lakani."
+  >
+
+  <title>Music Catalog | Minoo Lakani</title>
+
+  <link rel="stylesheet" href="style.css?v=43">
+  <link rel="stylesheet" href="music.css?v=1">
+</head>
+
+<body>
+
+  <header class="site-header">
+
+    <a
+      class="brand"
+      href="index.html#home"
+      aria-label="Minoo Lakani home"
+    >
+      <img
+        src="brand-logo.webp"
+        alt="Minoo Lakani Production logo"
+      >
+
+      <span>
+        <strong>Minoo Lakani</strong>
+        <small>Production</small>
+      </span>
+    </a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Open navigation"
+      aria-expanded="false"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="index.html#home">Home</a>
+      <a href="music.html" aria-current="page">Music</a>
+      <a href="index.html#videos">Videos</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#gallery">Gallery</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+
+  </header>
+
+  <main class="catalog-page">
+
+    <section class="catalog-hero">
+
+      <p class="catalog-eyebrow">Official Discography</p>
+
+      <h1>Music Catalog</h1>
+
+      <p class="catalog-intro">
+        Explore the complete collection of songs by Minoo Lakani.
+        Select any cover to listen through its official release page.
+      </p>
+
+    </section>
+
+    <section
+      class="catalog-section"
+      aria-labelledby="catalog-title"
+    >
+
+      <div class="catalog-heading">
+
+        <div>
+          <p class="catalog-eyebrow">Songs</p>
+          <h2 id="catalog-title">All Releases</h2>
+        </div>
+
+        <p
+          class="song-count"
+          id="songCount"
+          aria-live="polite"
+        ></p>
+
+      </div>
+
+      <div class="catalog-controls">
+
+        <label class="search-box" for="songSearch">
+
+          <span>Search songs</span>
+
+          <input
+            id="songSearch"
+            type="search"
+            placeholder="Search by title..."
+            autocomplete="off"
+          >
+
+        </label>
+
+        <div
+          class="filter-buttons"
+          role="group"
+          aria-label="Filter songs by language"
+        >
+
+          <button
+            class="filter-button active"
+            type="button"
+            data-filter="All"
+          >
+            All
+          </button>
+
+          <button
+            class="filter-button"
+            type="button"
+            data-filter="English"
+          >
+            English
+          </button>
+
+          <button
+            class="filter-button"
+            type="button"
+            data-filter="Persian"
+          >
+            Persian
+          </button>
+
+        </div>
+
+      </div>
+
+      <div
+        class="catalog-grid"
+        id="songCatalogGrid"
+      ></div>
+
+      <p
+        class="empty-message"
+        id="emptyMessage"
+        hidden
+      >
+        No songs match your search.
+      </p>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <img
+      src="brand-logo.webp"
+      alt="Minoo Lakani Production logo"
+    >
+
+    <p>© 2026 Minoo Lakani. All Rights Reserved.</p>
+
+  </footer>
+
+  <script src="songs.js?v=1"></script>
+  <script src="music.js?v=1"></script>
+
+</body>
+</html>
