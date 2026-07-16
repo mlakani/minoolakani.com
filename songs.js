@@ -107,5 +107,5 @@ window.songCatalog = [
   link: "https://distrokid.com/hyperfollow/minoolakani/dream?ref=release",
   language: "English",
   featured: false
-}
+},
 ];
