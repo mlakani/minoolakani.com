@@ -98,7 +98,7 @@ window.songCatalog = [
     link: "https://distrokid.com/hyperfollow/minoolakani/--7?ref=release",
     language: "Persian",
     featured: false
-  }
+  },
 {
   id: "dream",
   title: "Dream",
