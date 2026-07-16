@@ -99,4 +99,13 @@ window.songCatalog = [
     language: "Persian",
     featured: false
   }
+{
+  id: "dream",
+  title: "Dream",
+  alternateTitle: "",
+  image: "images/dream.jpg",
+  link: "https://distrokid.com/hyperfollow/minoolakani/dream?ref=release",
+  language: "English",
+  featured: false
+},
 ];
