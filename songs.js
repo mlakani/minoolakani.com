@@ -57,7 +57,7 @@ window.songCatalog = [
     image: "images/hese-naab.jpg",
     link: "https://distrokid.com/hyperfollow/minoolakani/--11?ref=release",
     language: "Persian",
-    featured: true
+    featured: false
   },
 
   {
@@ -99,13 +99,14 @@ window.songCatalog = [
     language: "Persian",
     featured: false
   },
-{
-  id: "dream",
-  title: "Dream",
-  alternateTitle: "",
-  image: "images/dream.jpg",
-  link: "https://distrokid.com/hyperfollow/minoolakani/dream?ref=release",
-  language: "English",
-  featured: false
-},
+
+  {
+    id: "dream",
+    title: "Dream",
+    alternateTitle: "",
+    image: "images/dream.jpg",
+    link: "https://distrokid.com/hyperfollow/minoolakani/dream?ref=release",
+    language: "English",
+    featured: true
+  },
 ];
