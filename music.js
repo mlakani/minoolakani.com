@@ -2,7 +2,8 @@
 
 /* =========================================
    MINOO LAKANI — MUSIC CATALOG
-   This file builds and controls music.html.
+   Builds the catalog, search, filters, and
+   separate language sections.
 ========================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -10,17 +11,27 @@ document.addEventListener("DOMContentLoaded", () => {
     ? window.songCatalog
     : [];
 
-  const catalogGrid = document.getElementById("songCatalogGrid");
+  const catalogContainer =
+    document.getElementById("songCatalogGrid");
   const songCount = document.getElementById("songCount");
   const searchInput = document.getElementById("songSearch");
   const emptyMessage = document.getElementById("emptyMessage");
-  const filterButtons = document.querySelectorAll(".filter-button");
+  const filterButtons =
+    document.querySelectorAll(".filter-button");
 
   const menuToggle = document.querySelector(".menu-toggle");
   const navigation = document.querySelector(".nav");
 
+  const preferredLanguageOrder = ["English", "Persian"];
+
   let activeFilter = "All";
   let searchTerm = "";
+
+  if (catalogContainer) {
+    catalogContainer.classList.remove("catalog-grid");
+    catalogContainer.style.width = "min(1400px, 100%)";
+    catalogContainer.style.margin = "0 auto";
+  }
 
   /* =========================================
      MOBILE NAVIGATION
@@ -39,22 +50,14 @@ document.addEventListener("DOMContentLoaded", () => {
     navigation.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
         navigation.classList.remove("open");
-
-        menuToggle.setAttribute(
-          "aria-expanded",
-          "false"
-        );
+        menuToggle.setAttribute("aria-expanded", "false");
       });
     });
 
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") {
         navigation.classList.remove("open");
-
-        menuToggle.setAttribute(
-          "aria-expanded",
-          "false"
-        );
+        menuToggle.setAttribute("aria-expanded", "false");
       }
     });
   }
@@ -100,7 +103,8 @@ document.addEventListener("DOMContentLoaded", () => {
     coverImage.decoding = "async";
 
     const coverPlaceholder = document.createElement("div");
-    coverPlaceholder.className = "catalog-cover-placeholder";
+    coverPlaceholder.className =
+      "catalog-cover-placeholder";
     coverPlaceholder.textContent = song.title;
     coverPlaceholder.setAttribute("aria-hidden", "true");
 
@@ -133,14 +137,13 @@ document.addEventListener("DOMContentLoaded", () => {
     cardCopy.append(language, title);
 
     if (song.alternateTitle) {
-      const alternateTitle = document.createElement("p");
+      const alternateTitle =
+        document.createElement("p");
 
       alternateTitle.className =
         "catalog-alternate-title";
-
       alternateTitle.textContent =
         song.alternateTitle;
-
       alternateTitle.dir = "auto";
 
       cardCopy.appendChild(alternateTitle);
@@ -156,8 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ========================================= */
 
   function getVisibleSongs() {
-    const normalizedSearch =
-      normalizeText(searchTerm);
+    const normalizedSearch = normalizeText(searchTerm);
 
     return songs.filter((song) => {
       const matchesLanguage =
@@ -181,6 +183,84 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* =========================================
+     GROUP SONGS BY LANGUAGE
+  ========================================= */
+
+  function groupSongsByLanguage(visibleSongs) {
+    const groupedSongs = new Map();
+
+    preferredLanguageOrder.forEach((language) => {
+      groupedSongs.set(language, []);
+    });
+
+    visibleSongs.forEach((song) => {
+      const language = song.language || "Other";
+
+      if (!groupedSongs.has(language)) {
+        groupedSongs.set(language, []);
+      }
+
+      groupedSongs.get(language).push(song);
+    });
+
+    return Array.from(groupedSongs.entries())
+      .filter(([, languageSongs]) => {
+        return languageSongs.length > 0;
+      });
+  }
+
+  function createLanguageSection(
+    language,
+    languageSongs
+  ) {
+    const section = document.createElement("section");
+    const headingId =
+      `${language.toLowerCase().replace(/\s+/g, "-")}-songs`;
+
+    section.className = "catalog-language-section";
+    section.setAttribute("aria-labelledby", headingId);
+    section.style.marginBottom =
+      "clamp(58px, 7vw, 92px)";
+
+    const heading = document.createElement("div");
+    heading.className = "catalog-heading";
+    heading.style.marginBottom = "26px";
+
+    const headingCopy = document.createElement("div");
+
+    const eyebrow = document.createElement("p");
+    eyebrow.className = "catalog-eyebrow";
+    eyebrow.textContent = language;
+
+    const title = document.createElement("h2");
+    title.id = headingId;
+    title.textContent = `${language} Songs`;
+
+    const count = document.createElement("p");
+    count.className = "song-count";
+
+    const songWord =
+      languageSongs.length === 1 ? "Song" : "Songs";
+
+    count.textContent =
+      `${languageSongs.length} ${songWord}`;
+
+    headingCopy.append(eyebrow, title);
+    heading.append(headingCopy, count);
+
+    const grid = document.createElement("div");
+    grid.className = "catalog-grid";
+
+    languageSongs.forEach((song) => {
+      grid.appendChild(createSongCard(song));
+    });
+
+    section.append(heading, grid);
+
+    return section;
+  }
+
+  /* =========================================
      UPDATE SONG COUNT
   ========================================= */
 
@@ -198,7 +278,6 @@ document.addEventListener("DOMContentLoaded", () => {
     ) {
       songCount.textContent =
         `${visibleTotal} ${songWord}`;
-
       return;
     }
 
@@ -211,39 +290,42 @@ document.addEventListener("DOMContentLoaded", () => {
   ========================================= */
 
   function renderCatalog() {
-    if (!catalogGrid || !emptyMessage) {
+    if (!catalogContainer || !emptyMessage) {
       return;
     }
 
     const visibleSongs = getVisibleSongs();
+    const languageGroups =
+      groupSongsByLanguage(visibleSongs);
 
-    catalogGrid.replaceChildren();
+    catalogContainer.replaceChildren();
 
     const fragment =
       document.createDocumentFragment();
 
-    visibleSongs.forEach((song) => {
-      fragment.appendChild(
-        createSongCard(song)
-      );
-    });
+    languageGroups.forEach(
+      ([language, languageSongs]) => {
+        fragment.appendChild(
+          createLanguageSection(
+            language,
+            languageSongs
+          )
+        );
+      }
+    );
 
-    catalogGrid.appendChild(fragment);
-
+    catalogContainer.appendChild(fragment);
     updateSongCount(visibleSongs.length);
 
     if (songs.length === 0) {
       emptyMessage.textContent =
         "No songs are available yet.";
-
       emptyMessage.hidden = false;
-
       return;
     }
 
     emptyMessage.textContent =
       "No songs match your search.";
-
     emptyMessage.hidden =
       visibleSongs.length !== 0;
   }
@@ -255,7 +337,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (searchInput) {
     searchInput.addEventListener("input", () => {
       searchTerm = searchInput.value;
-
       renderCatalog();
     });
 
@@ -268,7 +349,6 @@ document.addEventListener("DOMContentLoaded", () => {
         ) {
           searchInput.value = "";
           searchTerm = "";
-
           renderCatalog();
         }
       }
@@ -291,22 +371,19 @@ document.addEventListener("DOMContentLoaded", () => {
       activeFilter =
         button.dataset.filter || "All";
 
-      filterButtons.forEach(
-        (filterButton) => {
-          const isActive =
-            filterButton === button;
+      filterButtons.forEach((filterButton) => {
+        const isActive = filterButton === button;
 
-          filterButton.classList.toggle(
-            "active",
-            isActive
-          );
+        filterButton.classList.toggle(
+          "active",
+          isActive
+        );
 
-          filterButton.setAttribute(
-            "aria-pressed",
-            String(isActive)
-          );
-        }
-      );
+        filterButton.setAttribute(
+          "aria-pressed",
+          String(isActive)
+        );
+      });
 
       renderCatalog();
     });
