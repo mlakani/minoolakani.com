@@ -24,8 +24,66 @@
   {
     "@context": "https://schema.org",
     "@graph": [
-      {"@type":"WebSite","@id":"https://minoolakani.com/#website","url":"https://minoolakani.com/","name":"Minoo Lakani","description":"Official website of independent Persian and English music artist and songwriter Minoo Lakani.","inLanguage":["en","fa"]},
-      {"@type":"Person","@id":"https://minoolakani.com/#artist","name":"Minoo Lakani","url":"https://minoolakani.com/","image":"https://minoolakani.com/minoo-photo.webp","description":"Independent Persian and English songwriter, music artist, producer, and storyteller.","jobTitle":"Songwriter, Music Artist and Producer","knowsLanguage":["English","Persian"],"sameAs":["https://www.youtube.com/@MinooLVproduction","https://suno.com/@lakaniminoo","https://www.facebook.com/minoolvproduction/","https://www.iheart.com/artist/minoo-lakani-51146040/"]}
+      {
+        "@type": "Person",
+        "@id": "https://minoolakani.com/#artist",
+        "name": "Minoo Lakani",
+        "alternateName": "Minoo Lakani Production",
+        "url": "https://minoolakani.com/",
+        "image": {
+          "@type": "ImageObject",
+          "@id": "https://minoolakani.com/#artist-image",
+          "url": "https://minoolakani.com/minoo-photo.webp",
+          "contentUrl": "https://minoolakani.com/minoo-photo.webp",
+          "caption": "Minoo Lakani, Persian and English songwriter, music artist, and producer"
+        },
+        "description": "Minoo Lakani is an independent Persian and English songwriter, music artist, producer, and storyteller creating contemporary original music.",
+        "jobTitle": ["Songwriter", "Music Artist", "Music Producer"],
+        "knowsLanguage": ["English", "Persian"],
+        "knowsAbout": ["Songwriting", "Persian music", "English-language music", "Music production", "Contemporary pop music", "Emotional storytelling"],
+        "mainEntityOfPage": {"@id": "https://minoolakani.com/#profile-page"},
+        "sameAs": [
+          "https://www.youtube.com/@MinooLVproduction",
+          "https://suno.com/@lakaniminoo",
+          "https://www.facebook.com/minoolvproduction/",
+          "https://www.iheart.com/artist/minoo-lakani-51146040/"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://minoolakani.com/#website",
+        "url": "https://minoolakani.com/",
+        "name": "Minoo Lakani",
+        "alternateName": "Minoo Lakani Official Website",
+        "description": "Official website of independent Persian and English music artist and songwriter Minoo Lakani.",
+        "inLanguage": ["en", "fa"],
+        "publisher": {"@id": "https://minoolakani.com/#artist"}
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://minoolakani.com/#profile-page",
+        "url": "https://minoolakani.com/",
+        "name": "Minoo Lakani | Official Artist Website",
+        "isPartOf": {"@id": "https://minoolakani.com/#website"},
+        "about": {"@id": "https://minoolakani.com/#artist"},
+        "mainEntity": {"@id": "https://minoolakani.com/#artist"},
+        "primaryImageOfPage": {"@id": "https://minoolakani.com/#artist-image"},
+        "inLanguage": "en"
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://minoolakani.com/#featured-music",
+        "name": "Featured songs by Minoo Lakani",
+        "itemListOrder": "https://schema.org/ItemListOrderAscending",
+        "numberOfItems": 5,
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"url":"https://minoolakani.com/songs/dream.html","name":"Dream"},
+          {"@type":"ListItem","position":2,"url":"https://minoolakani.com/songs/my-own-heart.html","name":"My Own Heart"},
+          {"@type":"ListItem","position":3,"url":"https://minoolakani.com/songs/tell-me-you-love-me.html","name":"Tell Me You Love Me"},
+          {"@type":"ListItem","position":4,"url":"https://minoolakani.com/songs/eshgh-o-afsaneh.html","name":"عشق و افسانه"},
+          {"@type":"ListItem","position":5,"url":"https://minoolakani.com/songs/begoo-mano-doost-dari.html","name":"بگو منو دوستم داری"}
+        ]
+      }
     ]
   }
   </script>
