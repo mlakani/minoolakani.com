@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://minoolakani.com/</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://minoolakani.com/images/dream.jpg</image:loc>
+      <image:title>Dream by Minoo Lakani</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://minoolakani.com/minoo-photo.webp</image:loc>
+      <image:title>Minoo Lakani</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://minoolakani.com/music.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://minoolakani.com/images/dream.jpg</image:loc>
+      <image:title>Dream by Minoo Lakani</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://minoolakani.com/images/my-own-heart.jpg</image:loc>
+      <image:title>My Own Heart by Minoo Lakani</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://minoolakani.com/images/tell-me-you-love-me.jpg</image:loc>
+      <image:title>Tell Me You Love Me by Minoo Lakani</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://minoolakani.com/images/eshgh-o-afsaneh.jpg</image:loc>
+      <image:title>عشق و افسانه - Minoo Lakani</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://minoolakani.com/images/begoo-mano-doost-dari.jpg</image:loc>
+      <image:title>بگو منو دوستم داری - Minoo Lakani</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://minoolakani.com/images/hese-naab.jpg</image:loc>
+      <image:title>حس ناب - Minoo Lakani</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://minoolakani.com/images/rade-paye-to.jpg</image:loc>
+      <image:title>رد پای تو - Minoo Lakani</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://minoolakani.com/images/ghashangtarin-dalil.jpg</image:loc>
+      <image:title>قشنگترین دلیل - Minoo Lakani</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://minoolakani.com/images/khaterate-to.jpg</image:loc>
+      <image:title>خاطرات تو - Minoo Lakani</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://minoolakani.com/images/harfe-negah.jpg</image:loc>
+      <image:title>حرف نگاه - Minoo Lakani</image:title>
+    </image:image>
+  </url>
+</urlset>
