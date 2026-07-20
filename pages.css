@@ -352,6 +352,51 @@ body.interior-page {
   margin: 0;
 }
 
+/* New Minoo Lakani song logo */
+.brand img,
+footer > img,
+.gallery-tile--press img {
+  display: none;
+}
+
+.brand span {
+  display: none;
+}
+
+.brand::before {
+  content: "";
+  width: 168px;
+  height: 62px;
+  flex: 0 0 168px;
+  background: #fff url("brand-logo-new.svg") center / contain no-repeat;
+  border: 1px solid var(--gold);
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.28);
+}
+
+footer::before {
+  content: "";
+  display: block;
+  width: 190px;
+  height: 125px;
+  margin: 0 auto 18px;
+  background: #fff url("brand-logo-new.svg") center / contain no-repeat;
+  border: 1px solid rgba(215, 168, 76, 0.36);
+  border-radius: 10px;
+}
+
+.gallery-tile--press::before {
+  content: "";
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: 58%;
+  height: 58%;
+  transform: translate(-50%, -58%);
+  background: #fff url("brand-logo-new.svg") center / contain no-repeat;
+  border: 1px solid rgba(215, 168, 76, 0.36);
+  border-radius: 12px;
+}
+
 @media (max-width: 950px) {
   .two-column,
   .fact-grid,
@@ -390,5 +435,11 @@ body.interior-page {
 
   .gallery-figure--portrait img {
     aspect-ratio: 4 / 5;
+  }
+
+  .brand::before {
+    width: 138px;
+    height: 54px;
+    flex-basis: 138px;
   }
 }
