@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 548" role="img" aria-labelledby="title desc">
+  <title id="title">Minoo Lakani Song logo</title>
+  <desc id="desc">Black ML monogram with piano keys, string details, a red musical note, and the word SONG.</desc>
+  <rect width="820" height="548" fill="#fff"/>
+  <g fill="#050505" font-family="Georgia, 'Times New Roman', serif" font-weight="700">
+    <text x="145" y="408" font-size="350">M</text>
+    <text x="468" y="408" font-size="350">L</text>
+  </g>
+  <g stroke="#fff" stroke-width="7" stroke-linecap="square">
+    <path d="M197 193v185M229 184v194M261 198v180M293 216v162M326 183v195M356 177v201M386 199v179"/>
+  </g>
+  <g fill="#fff">
+    <rect x="188" y="190" width="18" height="95" rx="1"/>
+    <rect x="220" y="181" width="18" height="103" rx="1"/>
+    <rect x="252" y="195" width="18" height="90" rx="1"/>
+    <rect x="284" y="213" width="18" height="73" rx="1"/>
+    <rect x="317" y="180" width="18" height="105" rx="1"/>
+    <rect x="347" y="174" width="18" height="111" rx="1"/>
+    <rect x="377" y="196" width="18" height="89" rx="1"/>
+  </g>
+  <g stroke="#fff" stroke-width="4">
+    <path d="M512 165v220M524 165v220M536 165v220M548 165v220"/>
+  </g>
+  <g fill="#050505">
+    <circle cx="558" cy="205" r="7"/><circle cx="558" cy="232" r="7"/><circle cx="558" cy="259" r="7"/><circle cx="558" cy="286" r="7"/>
+  </g>
+  <g fill="#b90000">
+    <ellipse cx="406" cy="395" rx="52" ry="37" transform="rotate(-13 406 395)"/>
+    <path d="M430 395V81c0-20 13-39 33-51-8 25 2 49 31 76 45 42 61 88 50 137-8 38-30 70-61 94 27-44 35-83 21-117-12-29-36-53-74-73v248z"/>
+  </g>
+  <path d="M145 425h290M462 425h205" stroke="#050505" stroke-width="4"/>
+  <text x="168" y="485" fill="#050505" font-family="Georgia, 'Times New Roman', serif" font-size="50" letter-spacing="35">SONG</text>
+</svg>
