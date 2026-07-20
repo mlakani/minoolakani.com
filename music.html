@@ -6,8 +6,11 @@
   <meta name="description" content="Explore the official music catalog of Minoo Lakani, including dedicated pages for original Persian and English songs, cover artwork, transliterated titles, and official listening links.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="author" content="Minoo Lakani">
+  <meta name="theme-color" content="#17100c">
   <title>Minoo Lakani Songs | Persian & English Music Catalog</title>
   <link rel="canonical" href="https://minoolakani.com/music.html">
+  <link rel="icon" href="brand-logo.webp" type="image/webp">
+  <link rel="manifest" href="site.webmanifest">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Minoo Lakani">
   <meta property="og:title" content="Minoo Lakani Songs | Persian & English Music Catalog">
@@ -21,33 +24,56 @@
   <meta name="twitter:image" content="https://minoolakani.com/images/dream.jpg">
   <link rel="stylesheet" href="style.css?v=43">
   <link rel="stylesheet" href="music.css?v=1">
+  <link rel="stylesheet" href="pages.css?v=1">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "Minoo Lakani Official Music Catalog",
-    "url": "https://minoolakani.com/music.html",
-    "numberOfItems": 10,
-    "itemListElement": [
-      {"@type":"ListItem","position":1,"item":{"@type":"MusicRecording","name":"Dream","url":"https://minoolakani.com/songs/dream.html","sameAs":"https://distrokid.com/hyperfollow/minoolakani/dream?ref=release","image":"https://minoolakani.com/images/dream.jpg","inLanguage":"en","byArtist":{"@type":"Person","name":"Minoo Lakani","url":"https://minoolakani.com/"}}},
-      {"@type":"ListItem","position":2,"item":{"@type":"MusicRecording","name":"My Own Heart","url":"https://minoolakani.com/songs/my-own-heart.html","sameAs":"https://distrokid.com/hyperfollow/minoolakani/my-own-heart-2?ref=release","image":"https://minoolakani.com/images/my-own-heart.jpg","inLanguage":"en","byArtist":{"@type":"Person","name":"Minoo Lakani","url":"https://minoolakani.com/"}}},
-      {"@type":"ListItem","position":3,"item":{"@type":"MusicRecording","name":"Tell Me You Love Me","url":"https://minoolakani.com/songs/tell-me-you-love-me.html","sameAs":"https://distrokid.com/hyperfollow/minoolakani/tell-me-you-love-me-2?ref=release","image":"https://minoolakani.com/images/tell-me-you-love-me.jpg","inLanguage":"en","byArtist":{"@type":"Person","name":"Minoo Lakani","url":"https://minoolakani.com/"}}},
-      {"@type":"ListItem","position":4,"item":{"@type":"MusicRecording","name":"عشق و افسانه","alternateName":"Eshgh O Afsaneh","url":"https://minoolakani.com/songs/eshgh-o-afsaneh.html","sameAs":"https://distrokid.com/hyperfollow/minoolakani/---3?ref=release","image":"https://minoolakani.com/images/eshgh-o-afsaneh.jpg","inLanguage":"fa","byArtist":{"@type":"Person","name":"Minoo Lakani","url":"https://minoolakani.com/"}}},
-      {"@type":"ListItem","position":5,"item":{"@type":"MusicRecording","name":"بگو منو دوستم داری","alternateName":"Begoo Mano Doost Dari","url":"https://minoolakani.com/songs/begoo-mano-doost-dari.html","sameAs":"https://distrokid.com/hyperfollow/minoolakani/----2?ref=release","image":"https://minoolakani.com/images/begoo-mano-doost-dari.jpg","inLanguage":"fa","byArtist":{"@type":"Person","name":"Minoo Lakani","url":"https://minoolakani.com/"}}},
-      {"@type":"ListItem","position":6,"item":{"@type":"MusicRecording","name":"حسِ ناب","alternateName":"Hese Naab","url":"https://minoolakani.com/songs/hese-naab.html","sameAs":"https://distrokid.com/hyperfollow/minoolakani/--11?ref=release","image":"https://minoolakani.com/images/hese-naab.jpg","inLanguage":"fa","byArtist":{"@type":"Person","name":"Minoo Lakani","url":"https://minoolakani.com/"}}},
-      {"@type":"ListItem","position":7,"item":{"@type":"MusicRecording","name":"ردِ پای تو","alternateName":"Rade Paye To","url":"https://minoolakani.com/songs/rade-paye-to.html","sameAs":"https://distrokid.com/hyperfollow/minoolakani/---2?ref=release","image":"https://minoolakani.com/images/rade-paye-to.jpg","inLanguage":"fa","byArtist":{"@type":"Person","name":"Minoo Lakani","url":"https://minoolakani.com/"}}},
-      {"@type":"ListItem","position":8,"item":{"@type":"MusicRecording","name":"قشنگترین دلیل","alternateName":"Ghashangtarin Dalil","url":"https://minoolakani.com/songs/ghashangtarin-dalil.html","sameAs":"https://distrokid.com/hyperfollow/minoolakani/--10?ref=release","image":"https://minoolakani.com/images/ghashangtarin-dalil.jpg","inLanguage":"fa","byArtist":{"@type":"Person","name":"Minoo Lakani","url":"https://minoolakani.com/"}}},
-      {"@type":"ListItem","position":9,"item":{"@type":"MusicRecording","name":"خاطرات تو","alternateName":"Khaterate To","url":"https://minoolakani.com/songs/khaterate-to.html","sameAs":"https://distrokid.com/hyperfollow/minoolakani/--9?ref=release","image":"https://minoolakani.com/images/khaterate-to.jpg","inLanguage":"fa","byArtist":{"@type":"Person","name":"Minoo Lakani","url":"https://minoolakani.com/"}}},
-      {"@type":"ListItem","position":10,"item":{"@type":"MusicRecording","name":"حرف نگاه","alternateName":"Harfe Negah","url":"https://minoolakani.com/songs/harfe-negah.html","sameAs":"https://distrokid.com/hyperfollow/minoolakani/--7?ref=release","image":"https://minoolakani.com/images/harfe-negah.jpg","inLanguage":"fa","byArtist":{"@type":"Person","name":"Minoo Lakani","url":"https://minoolakani.com/"}}}
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://minoolakani.com/music.html#page",
+        "url": "https://minoolakani.com/music.html",
+        "name": "Minoo Lakani Songs | Persian & English Music Catalog",
+        "description": "Official bilingual music catalog of Minoo Lakani.",
+        "about": {"@id": "https://minoolakani.com/#artist"},
+        "mainEntity": {"@id": "https://minoolakani.com/music.html#catalog"},
+        "inLanguage": ["en", "fa"]
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://minoolakani.com/music.html#catalog",
+        "name": "Minoo Lakani Official Music Catalog",
+        "url": "https://minoolakani.com/music.html",
+        "numberOfItems": 10,
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"item":{"@type":"MusicRecording","name":"Dream","url":"https://minoolakani.com/songs/dream.html","sameAs":"https://distrokid.com/hyperfollow/minoolakani/dream?ref=release","image":"https://minoolakani.com/images/dream.jpg","inLanguage":"en","byArtist":{"@id":"https://minoolakani.com/#artist"}}},
+          {"@type":"ListItem","position":2,"item":{"@type":"MusicRecording","name":"My Own Heart","url":"https://minoolakani.com/songs/my-own-heart.html","sameAs":"https://distrokid.com/hyperfollow/minoolakani/my-own-heart-2?ref=release","image":"https://minoolakani.com/images/my-own-heart.jpg","inLanguage":"en","byArtist":{"@id":"https://minoolakani.com/#artist"}}},
+          {"@type":"ListItem","position":3,"item":{"@type":"MusicRecording","name":"Tell Me You Love Me","url":"https://minoolakani.com/songs/tell-me-you-love-me.html","sameAs":"https://distrokid.com/hyperfollow/minoolakani/tell-me-you-love-me-2?ref=release","image":"https://minoolakani.com/images/tell-me-you-love-me.jpg","inLanguage":"en","byArtist":{"@id":"https://minoolakani.com/#artist"}}},
+          {"@type":"ListItem","position":4,"item":{"@type":"MusicRecording","name":"عشق و افسانه","alternateName":"Eshgh O Afsaneh","url":"https://minoolakani.com/songs/eshgh-o-afsaneh.html","sameAs":"https://distrokid.com/hyperfollow/minoolakani/---3?ref=release","image":"https://minoolakani.com/images/eshgh-o-afsaneh.jpg","inLanguage":"fa","byArtist":{"@id":"https://minoolakani.com/#artist"}}},
+          {"@type":"ListItem","position":5,"item":{"@type":"MusicRecording","name":"بگو منو دوستم داری","alternateName":"Begoo Mano Doost Dari","url":"https://minoolakani.com/songs/begoo-mano-doost-dari.html","sameAs":"https://distrokid.com/hyperfollow/minoolakani/----2?ref=release","image":"https://minoolakani.com/images/begoo-mano-doost-dari.jpg","inLanguage":"fa","byArtist":{"@id":"https://minoolakani.com/#artist"}}},
+          {"@type":"ListItem","position":6,"item":{"@type":"MusicRecording","name":"حسِ ناب","alternateName":"Hese Naab","url":"https://minoolakani.com/songs/hese-naab.html","sameAs":"https://distrokid.com/hyperfollow/minoolakani/--11?ref=release","image":"https://minoolakani.com/images/hese-naab.jpg","inLanguage":"fa","byArtist":{"@id":"https://minoolakani.com/#artist"}}},
+          {"@type":"ListItem","position":7,"item":{"@type":"MusicRecording","name":"ردِ پای تو","alternateName":"Rade Paye To","url":"https://minoolakani.com/songs/rade-paye-to.html","sameAs":"https://distrokid.com/hyperfollow/minoolakani/---2?ref=release","image":"https://minoolakani.com/images/rade-paye-to.jpg","inLanguage":"fa","byArtist":{"@id":"https://minoolakani.com/#artist"}}},
+          {"@type":"ListItem","position":8,"item":{"@type":"MusicRecording","name":"قشنگترین دلیل","alternateName":"Ghashangtarin Dalil","url":"https://minoolakani.com/songs/ghashangtarin-dalil.html","sameAs":"https://distrokid.com/hyperfollow/minoolakani/--10?ref=release","image":"https://minoolakani.com/images/ghashangtarin-dalil.jpg","inLanguage":"fa","byArtist":{"@id":"https://minoolakani.com/#artist"}}},
+          {"@type":"ListItem","position":9,"item":{"@type":"MusicRecording","name":"خاطرات تو","alternateName":"Khaterate To","url":"https://minoolakani.com/songs/khaterate-to.html","sameAs":"https://distrokid.com/hyperfollow/minoolakani/--9?ref=release","image":"https://minoolakani.com/images/khaterate-to.jpg","inLanguage":"fa","byArtist":{"@id":"https://minoolakani.com/#artist"}}},
+          {"@type":"ListItem","position":10,"item":{"@type":"MusicRecording","name":"حرف نگاه","alternateName":"Harfe Negah","url":"https://minoolakani.com/songs/harfe-negah.html","sameAs":"https://distrokid.com/hyperfollow/minoolakani/--7?ref=release","image":"https://minoolakani.com/images/harfe-negah.jpg","inLanguage":"fa","byArtist":{"@id":"https://minoolakani.com/#artist"}}}
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://minoolakani.com/"},
+          {"@type":"ListItem","position":2,"name":"Music","item":"https://minoolakani.com/music.html"}
+        ]
+      }
     ]
   }
   </script>
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="index.html#home" aria-label="Minoo Lakani home"><img src="brand-logo.webp" alt="Minoo Lakani Production logo"><span><strong>Minoo Lakani</strong><small>Production</small></span></a>
+    <a class="brand" href="index.html" aria-label="Minoo Lakani home"><img src="brand-logo.webp" alt="Minoo Lakani Production logo"><span><strong>Minoo Lakani</strong><small>Production</small></span></a>
     <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
-    <nav class="nav" aria-label="Primary navigation"><a href="index.html#home">Home</a><a href="music.html" aria-current="page">Music</a><a href="index.html#videos">Videos</a><a href="index.html#about">About</a><a href="index.html#gallery">Gallery</a><a href="index.html#contact">Contact</a></nav>
+    <nav class="nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="music.html" aria-current="page">Music</a><a href="about.html">About</a><a href="gallery.html">Gallery</a><a href="press-kit.html">Press</a><a href="contact.html">Contact</a></nav>
   </header>
   <main class="catalog-page">
     <section class="catalog-hero"><p class="catalog-eyebrow">Official Discography</p><h1>Minoo Lakani Songs</h1><p class="catalog-intro">Explore original Persian and English songs by Minoo Lakani. Select a cover to open the song’s dedicated page, learn its title and meaning, and continue to the official release.</p></section>
@@ -79,7 +105,7 @@
       <p class="empty-message" id="emptyMessage" hidden>No songs match your search.</p>
     </section>
   </main>
-  <footer><img src="brand-logo.webp" alt="Minoo Lakani Production logo"><p>© 2026 Minoo Lakani. All Rights Reserved.</p></footer>
+  <footer><div class="footer-links"><a href="about.html">Biography</a><a href="music.html">Discography</a><a href="press-kit.html">Press Kit</a><a href="news.html">News</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a><a href="achievements.html">Milestones</a></div><img src="brand-logo.webp" alt="Minoo Lakani Production logo"><p>© 2026 Minoo Lakani. All Rights Reserved.</p></footer>
   <script src="music.js?v=3"></script>
 </body>
 </html>
