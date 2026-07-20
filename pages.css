@@ -352,7 +352,7 @@ body.interior-page {
   margin: 0;
 }
 
-/* New Minoo Lakani song logo */
+/* Gold ML SONG logo blended directly into the website */
 .brand img,
 footer > img,
 .gallery-tile--press img {
@@ -368,10 +368,10 @@ footer > img,
   width: 168px;
   height: 62px;
   flex: 0 0 168px;
-  background: #fff url("brand-logo-new.svg") center / contain no-repeat;
-  border: 1px solid var(--gold);
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.28);
+  background: transparent url("brand-logo-new.svg") center / contain no-repeat;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 footer::before {
@@ -380,9 +380,10 @@ footer::before {
   width: 190px;
   height: 125px;
   margin: 0 auto 18px;
-  background: #fff url("brand-logo-new.svg") center / contain no-repeat;
-  border: 1px solid rgba(215, 168, 76, 0.36);
-  border-radius: 10px;
+  background: transparent url("brand-logo-new.svg") center / contain no-repeat;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .gallery-tile--press::before {
@@ -392,9 +393,10 @@ footer::before {
   width: 58%;
   height: 58%;
   transform: translate(-50%, -58%);
-  background: #fff url("brand-logo-new.svg") center / contain no-repeat;
-  border: 1px solid rgba(215, 168, 76, 0.36);
-  border-radius: 12px;
+  background: transparent url("brand-logo-new.svg") center / contain no-repeat;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 @media (max-width: 950px) {
