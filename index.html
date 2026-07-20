@@ -23,6 +23,8 @@
   <meta name="twitter:description" content="Original Persian and English songs, music videos, lyrics, and the official catalog of Minoo Lakani.">
   <meta name="twitter:image" content="https://minoolakani.com/minoo-photo.webp">
   <meta name="twitter:image:alt" content="Official portrait of Minoo Lakani">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="style.css?v=46">
   <script type="application/ld+json">
   {
@@ -53,11 +55,11 @@
 <body>
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="Minoo Lakani home">
-      <img src="brand-logo.webp" alt="Minoo Lakani Production logo">
+      <img src="brand-logo.webp" alt="Minoo Lakani Production logo" width="58" height="58" decoding="async">
       <span><strong>Minoo Lakani</strong><small>Production</small></span>
     </a>
-    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
-    <nav class="nav" aria-label="Primary navigation">
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation"><span></span><span></span><span></span></button>
+    <nav class="nav" id="primary-navigation" aria-label="Primary navigation">
       <a href="index.html" aria-current="page">Home</a>
       <a href="music.html">Music</a>
       <a href="#videos">Videos</a>
@@ -91,18 +93,18 @@
           </div>
           <div class="motto"><p>MUSIC THAT SPEAKS<br>FROM THE HEART</p><div><span></span><b>✦</b><span></span></div></div>
         </div>
-        <div class="hero-photo"><img src="minoo-photo.webp" alt="Portrait of Minoo Lakani"></div>
+        <div class="hero-photo"><img src="minoo-photo.webp" alt="Portrait of Minoo Lakani" fetchpriority="high" decoding="async"></div>
         <a class="streaming-card" href="https://distrokid.com/hyperfollow/minoolakani/my-own-heart-2?ref=release" target="_blank" rel="noopener noreferrer">
           <p class="streaming-label">NOW STREAMING</p>
-          <div class="streaming-inner"><img src="images/my-own-heart.jpg" alt="My Own Heart by Minoo Lakani cover artwork"><div><h2>My Own Heart</h2><p>NEW SINGLE</p><span>LISTEN NOW</span></div></div>
+          <div class="streaming-inner"><img src="images/my-own-heart.jpg" alt="My Own Heart by Minoo Lakani cover artwork" loading="lazy" decoding="async"><div><h2>My Own Heart</h2><p>NEW SINGLE</p><span>LISTEN NOW</span></div></div>
         </a>
       </div>
 
       <section class="songs" id="music-preview">
         <div class="section-line"><span></span><h2>OFFICIAL MUSIC CATALOG</h2><span></span></div>
         <div class="song-grid">
-          <article><a class="song-link" href="songs/tell-me-you-love-me.html"><img class="cover" src="images/tell-me-you-love-me.jpg" alt="Tell Me You Love Me by Minoo Lakani cover artwork"><h3>Tell Me<br>You Love Me</h3></a></article>
-          <article><a class="song-link" href="songs/my-own-heart.html"><img class="cover" src="images/my-own-heart.jpg" alt="My Own Heart by Minoo Lakani cover artwork"><h3>My Own<br>Heart</h3></a></article>
+          <article><a class="song-link" href="songs/tell-me-you-love-me.html"><img class="cover" src="images/tell-me-you-love-me.jpg" alt="Tell Me You Love Me by Minoo Lakani cover artwork" loading="lazy" decoding="async"><h3>Tell Me<br>You Love Me</h3></a></article>
+          <article><a class="song-link" href="songs/my-own-heart.html"><img class="cover" src="images/my-own-heart.jpg" alt="My Own Heart by Minoo Lakani cover artwork" loading="lazy" decoding="async"><h3>My Own<br>Heart</h3></a></article>
         </div>
         <div style="text-align:center; margin-top:34px;"><a class="outline-link" href="music.html">View All 10 Songs</a></div>
       </section>
@@ -110,7 +112,7 @@
 
     <section class="content-section" id="videos">
       <p class="eyebrow">Watch</p><h2>Latest Videos</h2>
-      <div class="video-panel"><div class="play-button">▶</div><p>Watch Minoo Lakani's latest releases and visual stories.</p><a class="outline-link" href="https://www.youtube.com/@minoolakani1840" target="_blank" rel="noopener noreferrer">Open YouTube</a></div>
+      <div class="video-panel"><div class="play-button" aria-hidden="true">▶</div><p>Watch Minoo Lakani's latest releases and visual stories.</p><a class="outline-link" href="https://www.youtube.com/@minoolakani1840" target="_blank" rel="noopener noreferrer">Open YouTube</a></div>
     </section>
 
     <section class="content-section about-section" id="about">
@@ -123,7 +125,7 @@
     <section class="content-section contact-section" id="contact"><p class="eyebrow">Connect</p><h2>Contact</h2><p>For collaborations, production inquiries, and creative projects, connect through the official channels.</p><div class="contact-links"><a class="outline-link" href="contact.html">Contact Minoo Lakani</a><a class="outline-link" href="https://www.youtube.com/@minoolakani1840" target="_blank" rel="noopener noreferrer">YouTube</a><a class="outline-link" href="https://open.spotify.com/album/21YwPo5OZxFVKV3DCJZHCx" target="_blank" rel="noopener noreferrer">Spotify</a></div></section>
   </main>
 
-  <footer><img src="brand-logo.webp" alt="Minoo Lakani Production logo"><p>© 2026 Minoo Lakani. All Rights Reserved.</p></footer>
+  <footer><img src="brand-logo.webp" alt="Minoo Lakani Production logo" width="58" height="58" loading="lazy" decoding="async"><p>© 2026 Minoo Lakani. All Rights Reserved.</p></footer>
   <script>
     const menuButton = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.nav');
