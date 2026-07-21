@@ -14,7 +14,7 @@
   <meta property="og:type" content="profile">
   <meta property="og:site_name" content="Minoo Lakani">
   <meta property="og:title" content="Minoo Lakani | Persian & English Songwriter & Producer">
-  <meta property="og:description" content="Explore original Persian and English songs, music videos, lyrics, and the official music catalog of Minoo Lakani.">
+  <meta property="og:description" content="Explore original Persian and English songs, music videos, lyrics, and the official catalog of Minoo Lakani.">
   <meta property="og:url" content="https://minoolakani.com/">
   <meta property="og:image" content="https://minoolakani.com/minoo-photo.webp">
   <meta property="og:image:alt" content="Official portrait of songwriter, producer, and artist Minoo Lakani">
@@ -26,6 +26,33 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="style.css?v=46">
+  <style>
+    #music-preview .song-grid {
+      max-width: 900px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    @media (max-width: 760px) {
+      #music-preview .song-grid {
+        max-width: 560px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      #music-preview .song-grid article:last-child {
+        grid-column: 1 / -1;
+        width: min(100%, 270px);
+        justify-self: center;
+      }
+    }
+    @media (max-width: 480px) {
+      #music-preview .song-grid {
+        max-width: 290px;
+        grid-template-columns: 1fr;
+      }
+      #music-preview .song-grid article:last-child {
+        grid-column: auto;
+        width: 100%;
+      }
+    }
+  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -105,6 +132,7 @@
         <div class="song-grid">
           <article><a class="song-link" href="songs/tell-me-you-love-me.html"><img class="cover" src="images/tell-me-you-love-me.jpg" alt="Tell Me You Love Me by Minoo Lakani cover artwork" loading="lazy" decoding="async"><h3>Tell Me<br>You Love Me</h3></a></article>
           <article><a class="song-link" href="songs/my-own-heart.html"><img class="cover" src="images/my-own-heart.jpg" alt="My Own Heart by Minoo Lakani cover artwork" loading="lazy" decoding="async"><h3>My Own<br>Heart</h3></a></article>
+          <article><a class="song-link" href="songs/dream.html"><img class="cover" src="images/dream.jpg" alt="Dream by Minoo Lakani cover artwork" loading="lazy" decoding="async"><h3>Dream</h3></a></article>
         </div>
         <div style="text-align:center; margin-top:34px;"><a class="outline-link" href="music.html">View All 10 Songs</a></div>
       </section>
