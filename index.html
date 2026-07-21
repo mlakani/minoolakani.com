@@ -53,6 +53,11 @@
       }
     }
   </style>
+  <script>
+    if (window.location.pathname.endsWith('/index.html')) {
+      window.history.replaceState(null, '', '/');
+    }
+  </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -81,13 +86,13 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="index.html" aria-label="Minoo Lakani home">
+    <a class="brand" href="/" aria-label="Minoo Lakani home">
       <img src="brand-logo.webp" alt="Minoo Lakani Production logo" width="58" height="58" decoding="async">
       <span><strong>Minoo Lakani</strong><small>Production</small></span>
     </a>
     <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation"><span></span><span></span><span></span></button>
     <nav class="nav" id="primary-navigation" aria-label="Primary navigation">
-      <a href="index.html" aria-current="page">Home</a>
+      <a href="/" aria-current="page">Home</a>
       <a href="music.html">Music</a>
       <a href="#videos">Videos</a>
       <a href="about.html">About</a>
