@@ -352,53 +352,6 @@ body.interior-page {
   margin: 0;
 }
 
-/* Gold ML SONG logo blended directly into the website */
-.brand img,
-footer > img,
-.gallery-tile--press img {
-  display: none;
-}
-
-.brand span {
-  display: none;
-}
-
-.brand::before {
-  content: "";
-  width: 168px;
-  height: 62px;
-  flex: 0 0 168px;
-  background: transparent url("brand-logo-new.svg") center / contain no-repeat;
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-}
-
-footer::before {
-  content: "";
-  display: block;
-  width: 190px;
-  height: 125px;
-  margin: 0 auto 18px;
-  background: transparent url("brand-logo-new.svg") center / contain no-repeat;
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-}
-
-.gallery-tile--press::before {
-  content: "";
-  position: absolute;
-  inset: 50% auto auto 50%;
-  width: 58%;
-  height: 58%;
-  transform: translate(-50%, -58%);
-  background: transparent url("brand-logo-new.svg") center / contain no-repeat;
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-}
-
 @media (max-width: 950px) {
   .two-column,
   .fact-grid,
