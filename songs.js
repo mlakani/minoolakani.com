@@ -15,7 +15,7 @@ window.songCatalog = [
     title: "دلمو شکستی",
     alternateTitle: "Delamo Shekasti",
     image: "images/delamo-shekasti.jpg",
-    link: "audio/delamo-shekasti.mp3",
+    link: "https://distrokid.com/hyperfollow/minoolakani/--12?ref=release",
     language: "Persian",
     featured: false
   },
