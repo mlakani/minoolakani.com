@@ -11,6 +11,16 @@
 
 window.songCatalog = [
   {
+    id: "delamo-shekasti",
+    title: "دلمو شکستی",
+    alternateTitle: "Delamo Shekasti",
+    image: "images/delamo-shekasti.jpg",
+    link: "audio/delamo-shekasti.mp3",
+    language: "Persian",
+    featured: false
+  },
+
+  {
     id: "my-own-heart",
     title: "My Own Heart",
     alternateTitle: "",
