@@ -27,74 +27,28 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=46">
-  <link rel="stylesheet" href="homepage-2026.css?v=2">
+  <link rel="stylesheet" href="homepage-2026.css?v=3">
   <style>
-    #music-preview .song-grid {
-      max-width: 900px;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
+    #music-preview .song-grid { max-width: 900px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
     @media (max-width: 760px) {
-      #music-preview .song-grid {
-        max-width: 560px;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-      #music-preview .song-grid article:last-child {
-        grid-column: 1 / -1;
-        width: min(100%, 270px);
-        justify-self: center;
-      }
+      #music-preview .song-grid { max-width: 560px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      #music-preview .song-grid article:last-child { grid-column: 1 / -1; width: min(100%, 270px); justify-self: center; }
     }
     @media (max-width: 480px) {
-      #music-preview .song-grid {
-        max-width: 290px;
-        grid-template-columns: 1fr;
-      }
-      #music-preview .song-grid article:last-child {
-        grid-column: auto;
-        width: 100%;
-      }
+      #music-preview .song-grid { max-width: 290px; grid-template-columns: 1fr; }
+      #music-preview .song-grid article:last-child { grid-column: auto; width: 100%; }
     }
   </style>
   <script>
-    if (window.location.pathname.endsWith('/index.html')) {
-      window.history.replaceState(null, '', '/');
-    }
+    if (window.location.pathname.endsWith('/index.html')) window.history.replaceState(null, '', '/');
   </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "Person",
-        "@id": "https://minoolakani.com/#artist",
-        "name": "Minoo Lakani",
-        "url": "https://minoolakani.com/",
-        "image": "https://minoolakani.com/minoo-photo.webp",
-        "jobTitle": ["Independent Music Artist", "Songwriter", "Music Producer"],
-        "knowsLanguage": ["English", "Persian"],
-        "sameAs": [
-          "https://www.youtube.com/@minoolakani1840",
-          "https://music.apple.com/artist/6783251497"
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://minoolakani.com/#website",
-        "url": "https://minoolakani.com/",
-        "name": "Minoo Lakani",
-        "publisher": {"@id": "https://minoolakani.com/#artist"},
-        "inLanguage": ["en", "fa"]
-      },
-      {
-        "@type": "ProfilePage",
-        "@id": "https://minoolakani.com/#page",
-        "url": "https://minoolakani.com/",
-        "name": "Minoo Lakani | Independent Persian & English Music Artist",
-        "description": "Official website of Minoo Lakani, an independent Persian and English music artist, songwriter, and producer.",
-        "isPartOf": {"@id": "https://minoolakani.com/#website"},
-        "mainEntity": {"@id": "https://minoolakani.com/#artist"},
-        "inLanguage": "en"
-      }
+      {"@type":"Person","@id":"https://minoolakani.com/#artist","name":"Minoo Lakani","url":"https://minoolakani.com/","image":"https://minoolakani.com/minoo-photo.webp","jobTitle":["Independent Music Artist","Songwriter","Music Producer"],"knowsLanguage":["English","Persian"],"sameAs":["https://www.youtube.com/@minoolakani1840","https://music.apple.com/artist/6783251497"]},
+      {"@type":"WebSite","@id":"https://minoolakani.com/#website","url":"https://minoolakani.com/","name":"Minoo Lakani","publisher":{"@id":"https://minoolakani.com/#artist"},"inLanguage":["en","fa"]},
+      {"@type":"ProfilePage","@id":"https://minoolakani.com/#page","url":"https://minoolakani.com/","name":"Minoo Lakani | Independent Persian & English Music Artist","description":"Official website of Minoo Lakani, an independent Persian and English music artist, songwriter, and producer.","isPartOf":{"@id":"https://minoolakani.com/#website"},"mainEntity":{"@id":"https://minoolakani.com/#artist"},"inLanguage":"en"}
     ]
   }
   </script>
@@ -107,13 +61,7 @@
     </a>
     <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation"><span></span><span></span><span></span></button>
     <nav class="nav" id="primary-navigation" aria-label="Primary navigation">
-      <a href="/" aria-current="page">Home</a>
-      <a href="music.html">Music</a>
-      <a href="videos.html">Videos</a>
-      <a href="about.html">About</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="press-kit.html">Press</a>
-      <a href="contact.html">Contact</a>
+      <a href="/" aria-current="page">Home</a><a href="music.html">Music</a><a href="videos.html">Videos</a><a href="about.html">About</a><a href="gallery.html">Gallery</a><a href="press-kit.html">Press</a><a href="contact.html">Contact</a>
     </nav>
   </header>
 
@@ -122,24 +70,15 @@
       <div class="ornament"><span></span><b>✦</b><span></span></div>
       <div class="hero-grid">
         <div class="hero-copy">
-          <h1 class="artist-wordmark" aria-label="Minoo Lakani">
-            <span class="artist-first-name">Minoo</span>
-            <span class="artist-last-name">LAKANI</span>
+          <h1 class="artist-wordmark">
+            <span class="sr-only">Minoo Lakani</span>
+            <img class="artist-wordmark-image" src="images/minoo-lakani-wordmark.svg?v=1" alt="Minoo Lakani">
           </h1>
           <p class="roles">INDEPENDENT ARTIST <i>•</i> SONGWRITER <i>•</i> PRODUCER</p>
           <div class="platforms">
-            <a class="platform" href="https://music.apple.com/artist/6783251497" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M42.6 13.2c2.6-3 4.3-7.2 3.9-11.2-3.8.2-8.2 2.6-10.9 5.7-2.3 2.6-4.4 6.8-3.9 10.8 4.2.3 8.2-2.1 10.9-5.3ZM51.8 34.1c-.1-7.6 6.2-11.3 6.5-11.5-3.6-5.3-9.2-6-11.2-6.1-4.7-.5-9.3 2.8-11.7 2.8-2.5 0-6.2-2.8-10.2-2.7-5.2.1-10 3-12.7 7.5-5.4 9.3-1.4 23 3.8 30.5 2.6 3.7 5.6 7.8 9.6 7.6 3.9-.2 5.3-2.5 10-2.5 4.6 0 6 2.5 10 2.4 4.2-.1 6.8-3.7 9.3-7.4 3-4.3 4.2-8.5 4.3-8.7-.1 0-7.6-2.9-7.7-11.9Z"/></svg>
-              <span>Listen on Apple Music</span>
-            </a>
-            <a class="platform" href="https://open.spotify.com/album/21YwPo5OZxFVKV3DCJZHCx" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="27"/><path class="cut" d="M18 25c10-3 22-2 31 3M20 34c8-2 18-1 26 3M22 42c7-1 14 0 20 3"/></svg>
-              <span>Listen on Spotify</span>
-            </a>
-            <a class="platform" href="https://www.youtube.com/@minoolakani1840" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="8" y="15" width="48" height="34" rx="10"/><path class="play-shape" d="M27 24 43 32 27 40Z"/></svg>
-              <span>Watch on YouTube</span>
-            </a>
+            <a class="platform" href="https://music.apple.com/artist/6783251497" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M42.6 13.2c2.6-3 4.3-7.2 3.9-11.2-3.8.2-8.2 2.6-10.9 5.7-2.3 2.6-4.4 6.8-3.9 10.8 4.2.3 8.2-2.1 10.9-5.3ZM51.8 34.1c-.1-7.6 6.2-11.3 6.5-11.5-3.6-5.3-9.2-6-11.2-6.1-4.7-.5-9.3 2.8-11.7 2.8-2.5 0-6.2-2.8-10.2-2.7-5.2.1-10 3-12.7 7.5-5.4 9.3-1.4 23 3.8 30.5 2.6 3.7 5.6 7.8 9.6 7.6 3.9-.2 5.3-2.5 10-2.5 4.6 0 6 2.5 10 2.4 4.2-.1 6.8-3.7 9.3-7.4 3-4.3 4.2-8.5 4.3-8.7-.1 0-7.6-2.9-7.7-11.9Z"/></svg><span>Listen on Apple Music</span></a>
+            <a class="platform" href="https://open.spotify.com/album/21YwPo5OZxFVKV3DCJZHCx" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="27"/><path class="cut" d="M18 25c10-3 22-2 31 3M20 34c8-2 18-1 26 3M22 42c7-1 14 0 20 3"/></svg><span>Listen on Spotify</span></a>
+            <a class="platform" href="https://www.youtube.com/@minoolakani1840" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="8" y="15" width="48" height="34" rx="10"/><path class="play-shape" d="M27 24 43 32 27 40Z"/></svg><span>Watch on YouTube</span></a>
           </div>
           <div class="motto"><p>Original music. Meaningful stories. Timeless emotions.</p><div><span></span><b>✦</b><span></span></div></div>
         </div>
@@ -154,25 +93,16 @@
         <div class="section-line"><span></span><h2>FEATURED MUSIC</h2><span></span></div>
         <div class="song-grid">
           <article><a class="song-link" href="songs/dream.html"><img class="cover" src="images/dream.jpg" alt="Dream by Minoo Lakani cover artwork" loading="lazy" decoding="async"><h3>Dream</h3></a></article>
-          <article><a class="song-link" href="songs/tell-me-you-love-me.html"><img class="cover" src="images/tell-me-you-love-me.jpg" alt="Tell Me You Love Me by Minoo Lakani cover artwork" loading="lazy" decoding="async"><h3>Tell Me<br>You Love Me</h3></a></article>
+          <article><a class="song-link" href="songs/tell-me-you-love-me.html"><img class="cover" src="images/tell-me-you-love-me.jpg" alt="Tell Me You Love Me by Minoo Lakani cover artwork" loading="lazy" decoding="async"><h3>Tell Me You Love Me</h3></a></article>
           <article><a class="song-link" href="songs/my-own-heart.html"><img class="cover" src="images/my-own-heart.jpg" alt="My Own Heart by Minoo Lakani cover artwork" loading="lazy" decoding="async"><h3>My Own Heart</h3></a></article>
         </div>
         <div style="text-align:center; margin-top:34px;"><a class="outline-link" href="music.html">View All 11 Songs</a></div>
       </section>
     </section>
 
-    <section class="content-section" id="videos">
-      <p class="eyebrow">Watch</p><h2>Official Music Video</h2>
-      <div class="video-panel"><div class="play-button" aria-hidden="true">▶</div><p>The official video for <strong>Delamo Shekasti</strong> is coming soon. This section will link directly to the official release when it becomes available.</p><a class="outline-link" href="videos.html">Explore Videos</a></div>
-    </section>
-
-    <section class="content-section about-section" id="about">
-      <div><p class="eyebrow">About</p><h2>Minoo Lakani</h2></div>
-      <div class="section-copy"><p>Minoo Lakani is an independent artist, songwriter, producer, and storyteller creating contemporary music with heartfelt lyrics and cinematic concepts.</p><p>Her work connects music, visual storytelling, and modern creative tools to transform emotion and memory into memorable artistic experiences.</p><p><a class="outline-link" href="about.html">Read the Official Biography</a></p></div>
-    </section>
-
+    <section class="content-section" id="videos"><p class="eyebrow">Watch</p><h2>Official Music Video</h2><div class="video-panel"><div class="play-button" aria-hidden="true">▶</div><p>The official video for <strong>Delamo Shekasti</strong> is coming soon. This section will link directly to the official release when it becomes available.</p><a class="outline-link" href="videos.html">Explore Videos</a></div></section>
+    <section class="content-section about-section" id="about"><div><p class="eyebrow">About</p><h2>Minoo Lakani</h2></div><div class="section-copy"><p>Minoo Lakani is an independent artist, songwriter, producer, and storyteller creating contemporary music with heartfelt lyrics and cinematic concepts.</p><p>Her work connects music, visual storytelling, and modern creative tools to transform emotion and memory into memorable artistic experiences.</p><p><a class="outline-link" href="about.html">Read the Official Biography</a></p></div></section>
     <section class="content-section" id="gallery"><p class="eyebrow">Visuals</p><h2>Gallery</h2><div class="gallery-grid"><div class="gallery-tile"><span>Studio</span></div><div class="gallery-tile"><span>Music</span></div><div class="gallery-tile"><span>Stories</span></div></div><p><a class="outline-link" href="gallery.html">Open Gallery</a></p></section>
-
     <section class="content-section contact-section" id="contact"><p class="eyebrow">Connect</p><h2>Contact</h2><p>For collaborations, production inquiries, and creative projects, connect through the official channels.</p><div class="contact-links"><a class="outline-link" href="contact.html">Contact Minoo Lakani</a><a class="outline-link" href="https://www.youtube.com/@minoolakani1840" target="_blank" rel="noopener noreferrer">YouTube</a><a class="outline-link" href="https://open.spotify.com/album/21YwPo5OZxFVKV3DCJZHCx" target="_blank" rel="noopener noreferrer">Spotify</a></div></section>
   </main>
 
