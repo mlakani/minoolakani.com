@@ -21,13 +21,56 @@
   padding-bottom: 58px;
 }
 
-#home .hero-copy h1 {
-  font-size: clamp(4rem, 6.7vw, 6.9rem);
-  line-height: 0.82;
+#home .artist-wordmark {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: fit-content;
+  margin: 0;
+  color: var(--light-cream);
+  line-height: 1;
+}
+
+#home .artist-first-name {
+  position: relative;
+  display: inline-block;
+  font-family: "Italianno", "Brush Script MT", cursive;
+  font-size: clamp(5.6rem, 8.6vw, 8.7rem);
+  font-weight: 400;
+  line-height: 0.72;
+  letter-spacing: 0.005em;
+  color: var(--gold);
+  text-transform: none;
+  text-shadow: 0 2px 16px rgba(218, 163, 74, 0.16);
+}
+
+#home .artist-first-name::after {
+  content: "";
+  position: absolute;
+  left: 12%;
+  right: -11%;
+  bottom: -0.08em;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--gold) 14%, var(--light-cream) 72%, transparent 100%);
+  opacity: 0.76;
+  transform: rotate(-1deg);
+}
+
+#home .artist-last-name {
+  margin-top: 0.22em;
+  padding-left: 0.34em;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2.65rem, 4.25vw, 4.55rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.24em;
+  color: var(--light-cream);
+  text-transform: uppercase;
+  text-shadow: 0 1px 12px rgba(244, 225, 177, 0.1);
 }
 
 #home .roles {
-  margin: 24px 0 26px;
+  margin: 30px 0 26px;
   white-space: normal;
 }
 
@@ -155,6 +198,14 @@
     padding-bottom: 20px;
   }
 
+  #home .artist-first-name {
+    font-size: clamp(5.2rem, 15vw, 7.8rem);
+  }
+
+  #home .artist-last-name {
+    font-size: clamp(2.4rem, 7vw, 4rem);
+  }
+
   #home .hero-photo {
     min-height: 480px;
   }
@@ -177,8 +228,14 @@
     padding-inline: 20px;
   }
 
-  #home .hero-copy h1 {
-    font-size: clamp(3.25rem, 17vw, 4.8rem);
+  #home .artist-first-name {
+    font-size: clamp(4.55rem, 23vw, 6.1rem);
+  }
+
+  #home .artist-last-name {
+    padding-left: 0.18em;
+    font-size: clamp(2.05rem, 10vw, 3rem);
+    letter-spacing: 0.18em;
   }
 
   #home .platform {
