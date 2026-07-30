@@ -93,4 +93,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     footer.insertBefore(wrapper, footer.firstChild);
   }
+
+  if (!document.querySelector('script[data-minoo-chat]')) {
+    const chat = document.createElement("script");
+    chat.src = "../chat-widget.js?v=1";
+    chat.defer = true;
+    chat.dataset.minooChat = "true";
+    document.body.appendChild(chat);
+  }
 });
