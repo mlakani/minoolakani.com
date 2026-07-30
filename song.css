@@ -47,6 +47,14 @@
   box-shadow: 0 28px 65px rgba(0, 0, 0, 0.46);
 }
 
+.song-cover-image--identity {
+  padding: 12%;
+  object-fit: contain;
+  background:
+    radial-gradient(circle at 50% 35%, rgba(237, 203, 125, 0.2), transparent 38%),
+    linear-gradient(145deg, #533928, #18100d);
+}
+
 .song-details {
   min-width: 0;
 }
@@ -274,6 +282,14 @@
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
+}
+
+.related-card img.related-card-identity {
+  padding: 12%;
+  object-fit: contain;
+  background:
+    radial-gradient(circle at 50% 35%, rgba(237, 203, 125, 0.2), transparent 38%),
+    linear-gradient(145deg, #533928, #18100d);
 }
 
 .related-card span {
