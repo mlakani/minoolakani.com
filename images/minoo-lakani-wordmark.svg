@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 360" role="img" aria-labelledby="title desc">
+  <title id="title">Minoo Lakani</title>
+  <desc id="desc">Elegant rose-gold signature wordmark for Minoo Lakani</desc>
+  <defs>
+    <linearGradient id="roseGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8ddd2"/>
+      <stop offset="0.38" stop-color="#efb7ab"/>
+      <stop offset="0.68" stop-color="#fff3e6"/>
+      <stop offset="1" stop-color="#d78f86"/>
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="820" height="360" fill="none"/>
+  <text x="86" y="205" fill="url(#roseGold)" font-family="Italianno, 'Brush Script MT', cursive" font-size="190" font-weight="400" letter-spacing="-3">Minoo</text>
+  <path d="M303 218 C410 248 565 237 694 197 C728 187 753 179 780 177" fill="none" stroke="url(#roseGold)" stroke-width="5" stroke-linecap="round"/>
+  <g transform="translate(778 177)" filter="url(#softGlow)" fill="#f8dfb6">
+    <path d="M0-22 L3-4 L20 0 L3 4 L0 22 L-3 4 L-20 0 L-3-4 Z"/>
+    <circle r="3.5" fill="#fff8ea"/>
+  </g>
+  <text x="228" y="302" fill="url(#roseGold)" font-family="Georgia, 'Times New Roman', serif" font-size="76" font-weight="600" letter-spacing="10">LAKANI</text>
+</svg>
