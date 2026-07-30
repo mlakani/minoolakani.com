@@ -222,6 +222,14 @@
   transition: transform 0.35s ease;
 }
 
+.catalog-cover--identity {
+  padding: 12%;
+  object-fit: contain;
+  background:
+    radial-gradient(circle at 50% 35%, rgba(237, 203, 125, 0.2), transparent 38%),
+    linear-gradient(145deg, #533928, #18100d);
+}
+
 .catalog-card:hover .catalog-cover { transform: scale(1.035) translateZ(0); }
 
 .catalog-cover-placeholder {
