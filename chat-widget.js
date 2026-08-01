@@ -1,5 +1,10 @@
 "use strict";
 
+(function updateMyOwnHeartCover() {
+  const cover = document.querySelector('.streaming-card .streaming-inner > img');
+  if (cover) cover.src = '/my-own-heart.jpg?v=20260801';
+})();
+
 (function restoreHomepageStreamingCard() {
   if (!document.querySelector(".streaming-card")) return;
 
