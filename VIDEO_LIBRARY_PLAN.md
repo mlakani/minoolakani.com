@@ -12,7 +12,7 @@ This document records the approved format and expansion rules for the official v
   - Short description
   - Embedded YouTube player
   - Direct "Watch on YouTube" link
-- Keep the official channel button connected to https://www.youtube.com/@minoolakani1840.
+- Keep the official channel button connected to https://www.youtube.com/@minoolakanimusic.
 - Preserve mobile-friendly responsive behavior.
 - Do not add overlays, watermarks, or unrelated branding to the source videos.
 
