@@ -11,6 +11,16 @@
 
 window.songCatalog = [
   {
+    id: "ghesye-manoto",
+    title: "قصه من و تو",
+    alternateTitle: "Ghesye Manoto",
+    image: "images/ghesye-manoto.jpg",
+    link: "https://distrokid.com/hyperfollow/minoolakani/---5?ref=release",
+    language: "Persian",
+    featured: true
+  },
+
+  {
     id: "delamo-shekasti",
     title: "دلمو شکستی",
     alternateTitle: "Delamo Shekasti",
