@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const icon = document.createElement("link");
     icon.rel = "icon";
     icon.type = "image/webp";
-    icon.href = "../brand-logo.webp";
+    icon.href = "../brand-logo-192.webp";
     head.appendChild(icon);
   }
 
@@ -68,6 +68,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  document.querySelectorAll(".song-actions").forEach((actions) => {
+    if (actions.querySelector('a[href*="youtube.com/channel/"]')) return;
+    const subscribe = document.createElement("a");
+    subscribe.className = "song-action song-action-secondary";
+    subscribe.href = "https://www.youtube.com/channel/UCB_L4vDkhGpfcNPKvk8laMw?sub_confirmation=1";
+    subscribe.target = "_blank";
+    subscribe.rel = "noopener noreferrer";
+    subscribe.textContent = "Subscribe on YouTube";
+    actions.appendChild(subscribe);
+  });
+
   if (footer && !footer.querySelector(".footer-links")) {
     const style = document.createElement("style");
     style.textContent = ".footer-links{margin:0 auto 18px;display:flex;flex-wrap:wrap;justify-content:center;gap:9px 18px}.footer-links a{color:var(--cream);font-size:.66rem;letter-spacing:.1em;text-decoration:none;text-transform:uppercase}.footer-links a:hover,.footer-links a:focus-visible{color:var(--soft-gold)}";
@@ -76,6 +87,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const links = [
       ["Biography", "../about.html"],
       ["Discography", "../music.html"],
+      ["Videos", "../videos.html"],
+      ["YouTube", "https://www.youtube.com/channel/UCB_L4vDkhGpfcNPKvk8laMw?sub_confirmation=1"],
       ["Press Kit", "../press-kit.html"],
       ["News", "../news.html"],
       ["Gallery", "../gallery.html"],
@@ -89,14 +102,35 @@ document.addEventListener("DOMContentLoaded", () => {
       const link = document.createElement("a");
       link.href = href;
       link.textContent = label;
+      if (href.startsWith("https://")) {
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+      }
       wrapper.appendChild(link);
     });
     footer.insertBefore(wrapper, footer.firstChild);
   }
 
+  const relatedSongs = document.querySelector(".related-songs");
+  if (relatedSongs && !document.querySelector(".youtube-subscribe-section")) {
+    const subscribeSection = document.createElement("section");
+    subscribeSection.className = "youtube-subscribe-section";
+    subscribeSection.setAttribute("aria-labelledby", "youtube-subscribe-title");
+    subscribeSection.innerHTML = `
+      <div class="youtube-subscribe-inner">
+        <p class="eyebrow">Hear the next song first</p>
+        <h2 id="youtube-subscribe-title">Subscribe on YouTube</h2>
+        <p>Follow Minoo Lakani for new Persian and English songs, lyric videos, and visual stories.</p>
+        <p class="youtube-subscribe-persian" lang="fa" dir="rtl">برای شنیدن ترانه‌های تازهٔ فارسی و انگلیسی، کانال رسمی مینو لکانی را دنبال کنید.</p>
+        <a class="song-action song-action-primary" href="https://www.youtube.com/channel/UCB_L4vDkhGpfcNPKvk8laMw?sub_confirmation=1" target="_blank" rel="noopener noreferrer">Subscribe on YouTube</a>
+      </div>
+    `;
+    relatedSongs.before(subscribeSection);
+  }
+
   if (!document.querySelector('script[data-minoo-chat]')) {
     const chat = document.createElement("script");
-    chat.src = "../chat-widget.js?v=2";
+    chat.src = "../chat-widget.js?v=3";
     chat.defer = true;
     chat.dataset.minooChat = "true";
     document.body.appendChild(chat);

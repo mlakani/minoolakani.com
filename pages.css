@@ -113,6 +113,11 @@ body.interior-page {
   object-position: center top;
 }
 
+.profile-card--square img {
+  aspect-ratio: 1;
+  object-position: center;
+}
+
 .profile-card-copy {
   padding: 24px;
 }
