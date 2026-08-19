@@ -10,6 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
     "dream.html": "https://www.youtube.com/watch?v=yX3tIs7DEGs",
     "my-own-heart.html": "https://www.youtube.com/watch?v=G5dfKaHd3hM",
     "tell-me-you-love-me.html": "https://www.youtube.com/watch?v=WIdqgvEyUHo",
+    "ghost-of-you.html": "https://www.youtube.com/watch?v=ln9XzcbFAcM",
+    "america-my-home.html": "https://www.youtube.com/watch?v=UqhHzM4NDR4",
+    "corazon-con-corazon.html": "https://www.youtube.com/watch?v=cjG7mWh01mU",
     "ghesye-manoto.html": "https://www.youtube.com/watch?v=h9TM3NI-89o",
     "delamo-shekasti.html": "https://www.youtube.com/watch?v=P3IGulIgkuA",
     "eshgh-o-afsaneh.html": "https://www.youtube.com/watch?v=KL5Ex1lB4d4",
@@ -18,7 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "rade-paye-to.html": "https://www.youtube.com/watch?v=XYZINlBfOHA",
     "ghashangtarin-dalil.html": "https://www.youtube.com/watch?v=2sFA149pHDM",
     "khaterate-to.html": "https://www.youtube.com/watch?v=AvKesDc-OB8",
-    "harfe-negah.html": "https://www.youtube.com/watch?v=-CQ_N-XT3XI"
+    "harfe-negah.html": "https://www.youtube.com/watch?v=-CQ_N-XT3XI",
+    "iran-khaneh-mast.html": "https://www.youtube.com/watch?v=kJn6pnlasko"
   };
 
   const currentPage = location.pathname.split("/").pop();
@@ -32,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
     youtube.rel = "noopener noreferrer";
     youtube.textContent = "Watch on YouTube";
     actions.insertBefore(youtube, actions.firstChild);
-
     const existingPrimary = actions.querySelectorAll(".song-action-primary");
     existingPrimary.forEach((link, index) => { if (index > 0) link.classList.replace("song-action-primary", "song-action-secondary"); });
   }
@@ -40,8 +43,9 @@ document.addEventListener("DOMContentLoaded", () => {
   if (actions) {
     const kicker = document.querySelector(".song-kicker")?.textContent || "";
     const isPersian = /Persian/i.test(kicker) || document.querySelector('.song-title[lang="fa"]');
-    const catalogHref = isPersian ? "../music.html#persian-songs" : "../music.html#english-songs";
-    const catalogLabel = isPersian ? "More Persian Songs" : "More English Songs";
+    const isSpanish = /Spanish/i.test(kicker) || document.documentElement.lang === "es";
+    const catalogHref = isPersian ? "../music.html#persian-songs" : isSpanish ? "../music.html#spanish-songs" : "../music.html#english-songs";
+    const catalogLabel = isPersian ? "More Persian Songs" : isSpanish ? "More Spanish Songs" : "More English Songs";
     if (!actions.querySelector(`a[href="${catalogHref}"]`)) {
       const catalogLink = document.createElement("a");
       catalogLink.className = "song-action song-action-secondary";
@@ -89,6 +93,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if(footer&&!footer.querySelector(".footer-links")){ const style=document.createElement("style"); style.textContent=".footer-links{margin:0 auto 18px;display:flex;flex-wrap:wrap;justify-content:center;gap:9px 18px}.footer-links a{color:var(--cream);font-size:.66rem;letter-spacing:.1em;text-decoration:none;text-transform:uppercase}.footer-links a:hover,.footer-links a:focus-visible{color:var(--soft-gold)}"; head.appendChild(style); const links=[["Biography","../about.html"],["Discography","../music.html"],["Videos","../videos.html"],["YouTube","https://www.youtube.com/channel/UCB_L4vDkhGpfcNPKvk8laMw?sub_confirmation=1"],["Press Kit","../press-kit.html"],["News","../news.html"],["Gallery","../gallery.html"],["Contact","../contact.html"],["Milestones","../achievements.html"]]; const wrapper=document.createElement("div"); wrapper.className="footer-links"; links.forEach(([label,href])=>{const link=document.createElement("a");link.href=href;link.textContent=label;if(href.startsWith("https://")){link.target="_blank";link.rel="noopener noreferrer";}wrapper.appendChild(link);});footer.insertBefore(wrapper,footer.firstChild); }
 
-  const relatedSongs=document.querySelector(".related-songs"); if(relatedSongs&&!document.querySelector(".youtube-subscribe-section")){ const subscribeSection=document.createElement("section"); subscribeSection.className="youtube-subscribe-section"; subscribeSection.setAttribute("aria-labelledby","youtube-subscribe-title"); subscribeSection.innerHTML=`<div class="youtube-subscribe-inner"><p class="eyebrow">Hear the next song first</p><h2 id="youtube-subscribe-title">Subscribe on YouTube</h2><p>Follow Minoo Lakani for new Persian and English songs, lyric videos, and visual stories.</p><p class="youtube-subscribe-persian" lang="fa" dir="rtl">برای شنیدن ترانه‌های تازهٔ فارسی و انگلیسی، کانال رسمی مینو لکانی را دنبال کنید.</p><a class="song-action song-action-primary" href="https://www.youtube.com/channel/UCB_L4vDkhGpfcNPKvk8laMw?sub_confirmation=1" target="_blank" rel="noopener noreferrer">Subscribe on YouTube</a></div>`; relatedSongs.before(subscribeSection); }
+  const relatedSongs=document.querySelector(".related-songs"); if(relatedSongs&&!document.querySelector(".youtube-subscribe-section")){ const subscribeSection=document.createElement("section"); subscribeSection.className="youtube-subscribe-section"; subscribeSection.setAttribute("aria-labelledby","youtube-subscribe-title"); subscribeSection.innerHTML=`<div class="youtube-subscribe-inner"><p class="eyebrow">Hear the next song first</p><h2 id="youtube-subscribe-title">Subscribe on YouTube</h2><p>Follow Minoo Lakani for new Persian, English, and Spanish songs, lyric videos, and visual stories.</p><p class="youtube-subscribe-persian" lang="fa" dir="rtl">برای شنیدن ترانه‌های تازهٔ فارسی و انگلیسی، کانال رسمی مینو لکانی را دنبال کنید.</p><a class="song-action song-action-primary" href="https://www.youtube.com/channel/UCB_L4vDkhGpfcNPKvk8laMw?sub_confirmation=1" target="_blank" rel="noopener noreferrer">Subscribe on YouTube</a></div>`; relatedSongs.before(subscribeSection); }
   if(!document.querySelector('script[data-minoo-chat]')){const chat=document.createElement("script");chat.src="../chat-widget.js?v=3";chat.defer=true;chat.dataset.minooChat="true";document.body.appendChild(chat);}
 });
