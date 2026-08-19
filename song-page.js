@@ -37,6 +37,22 @@ document.addEventListener("DOMContentLoaded", () => {
     existingPrimary.forEach((link, index) => { if (index > 0) link.classList.replace("song-action-primary", "song-action-secondary"); });
   }
 
+  if (actions) {
+    const kicker = document.querySelector(".song-kicker")?.textContent || "";
+    const isPersian = /Persian/i.test(kicker) || document.querySelector('.song-title[lang="fa"]');
+    const catalogHref = isPersian ? "../music.html#persian-songs" : "../music.html#english-songs";
+    const catalogLabel = isPersian ? "More Persian Songs" : "More English Songs";
+    if (!actions.querySelector(`a[href="${catalogHref}"]`)) {
+      const catalogLink = document.createElement("a");
+      catalogLink.className = "song-action song-action-secondary";
+      catalogLink.href = catalogHref;
+      catalogLink.textContent = catalogLabel;
+      const genericCatalog = actions.querySelector('a[href="../music.html"]');
+      if (genericCatalog) actions.insertBefore(catalogLink, genericCatalog);
+      else actions.appendChild(catalogLink);
+    }
+  }
+
   if (youtubeUrl) {
     document.querySelectorAll('script[type="application/ld+json"]').forEach((script) => {
       try {
