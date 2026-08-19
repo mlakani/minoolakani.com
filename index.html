@@ -25,30 +25,14 @@
   <meta name="twitter:image:alt" content="Official portrait of Minoo Lakani">
   <link rel="stylesheet" href="style.css?v=47">
   <style>
-    #music-preview .song-grid {
-      max-width: 900px;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
+    #music-preview .song-grid { max-width: 900px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
     @media (max-width: 760px) {
-      #music-preview .song-grid {
-        max-width: 560px;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-      #music-preview .song-grid article:last-child {
-        grid-column: 1 / -1;
-        width: min(100%, 270px);
-        justify-self: center;
-      }
+      #music-preview .song-grid { max-width: 560px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      #music-preview .song-grid article:last-child { grid-column: 1 / -1; width: min(100%, 270px); justify-self: center; }
     }
     @media (max-width: 480px) {
-      #music-preview .song-grid {
-        max-width: 290px;
-        grid-template-columns: 1fr;
-      }
-      #music-preview .song-grid article:last-child {
-        grid-column: auto;
-        width: 100%;
-      }
+      #music-preview .song-grid { max-width: 290px; grid-template-columns: 1fr; }
+      #music-preview .song-grid article:last-child { grid-column: auto; width: 100%; }
     }
   </style>
   <script type="application/ld+json">
@@ -87,31 +71,27 @@
         "description": "Official website of Minoo Lakani, a Persian and English music artist, songwriter, and producer.",
         "isPartOf": {"@id": "https://minoolakani.com/#website"},
         "mainEntity": {"@id": "https://minoolakani.com/#artist"},
-        "dateModified": "2026-08-17",
+        "dateModified": "2026-08-18",
         "inLanguage": "en"
       },
       {
         "@type": "MusicRecording",
-        "@id": "https://minoolakani.com/songs/ghesye-manoto.html#recording",
-        "name": "قصه من و تو",
-        "alternateName": ["Ghesye Manoto", "The Story of Me and You"],
-        "url": "https://minoolakani.com/songs/ghesye-manoto.html",
-        "sameAs": [
-          "https://distrokid.com/hyperfollow/minoolakani/---5?ref=release",
-          "https://www.youtube.com/watch?v=h9TM3NI-89o"
-        ],
-        "image": "https://minoolakani.com/images/gheseye-manoto.jpg",
-        "description": "قصه من و تو is an original Persian-language release by Minoo Lakani.",
+        "@id": "https://minoolakani.com/songs/eshgh-o-afsaneh.html#recording",
+        "name": "عشق و افسانه",
+        "alternateName": "Eshgh O Afsaneh",
+        "url": "https://minoolakani.com/songs/eshgh-o-afsaneh.html",
+        "sameAs": ["https://www.youtube.com/watch?v=KL5Ex1lB4d4", "https://distrokid.com/hyperfollow/minoolakani/---3?ref=release"],
+        "image": "https://minoolakani.com/images/eshgh-o-afsaneh.jpg",
         "inLanguage": "fa",
-        "byArtist": {"@id": "https://minoolakani.com/#artist"},
-        "mainEntityOfPage": {"@id": "https://minoolakani.com/songs/ghesye-manoto.html"},
-        "potentialAction": {
-          "@type": "ListenAction",
-          "target": [
-            "https://distrokid.com/hyperfollow/minoolakani/---5?ref=release",
-            "https://www.youtube.com/watch?v=h9TM3NI-89o"
-          ]
-        }
+        "byArtist": {"@id": "https://minoolakani.com/#artist"}
+      },
+      {
+        "@type": "MusicRecording",
+        "name": "America, my home",
+        "sameAs": "https://www.youtube.com/watch?v=UqhHzM4NDR4",
+        "image": "https://i.ytimg.com/vi/UqhHzM4NDR4/maxresdefault.jpg",
+        "inLanguage": "en",
+        "byArtist": {"@id": "https://minoolakani.com/#artist"}
       }
     ]
   }
@@ -119,100 +99,44 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="/" aria-label="Minoo Lakani home">
-      <img src="brand-logo-512.webp" alt="Minoo Lakani Production logo" width="58" height="58" decoding="async">
-      <span><strong>Minoo Lakani</strong><small>Production</small></span>
-    </a>
+    <a class="brand" href="/" aria-label="Minoo Lakani home"><img src="brand-logo-512.webp" alt="Minoo Lakani Production logo" width="58" height="58" decoding="async"><span><strong>Minoo Lakani</strong><small>Production</small></span></a>
     <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation"><span></span><span></span><span></span></button>
-    <nav class="nav" id="primary-navigation" aria-label="Primary navigation">
-      <a href="/" aria-current="page">Home</a>
-      <a href="music.html">Music</a>
-      <a href="videos.html">Videos</a>
-      <a href="about.html">About</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="press-kit.html">Press</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <nav class="nav" id="primary-navigation" aria-label="Primary navigation"><a href="/" aria-current="page">Home</a><a href="music.html">Music</a><a href="videos.html">Videos</a><a href="about.html">About</a><a href="gallery.html">Gallery</a><a href="press-kit.html">Press</a><a href="contact.html">Contact</a></nav>
   </header>
-
   <main>
     <section class="poster" id="home">
       <div class="ornament"><span></span><b>✦</b><span></span></div>
       <div class="hero-grid">
-        <div class="hero-copy">
-          <h1><span>MINOO</span><span>LAKANI</span></h1>
-          <p class="roles">SONGWRITER <i>•</i> PRODUCER <i>•</i> ARTIST</p>
+        <div class="hero-copy"><h1><span>MINOO</span><span>LAKANI</span></h1><p class="roles">SONGWRITER <i>•</i> PRODUCER <i>•</i> ARTIST</p>
           <div class="platforms">
-            <a class="platform" href="https://music.apple.com/us/artist/minoo-lakani/6783251497" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M42.6 13.2c2.6-3 4.3-7.2 3.9-11.2-3.8.2-8.2 2.6-10.9 5.7-2.3 2.6-4.4 6.8-3.9 10.8 4.2.3 8.2-2.1 10.9-5.3ZM51.8 34.1c-.1-7.6 6.2-11.3 6.5-11.5-3.6-5.3-9.2-6-11.2-6.1-4.7-.5-9.3 2.8-11.7 2.8-2.5 0-6.2-2.8-10.2-2.7-5.2.1-10 3-12.7 7.5-5.4 9.3-1.4 23 3.8 30.5 2.6 3.7 5.6 7.8 9.6 7.6 3.9-.2 5.3-2.5 10-2.5 4.6 0 6 2.5 10 2.4 4.2-.1 6.8-3.7 9.3-7.4 3-4.3 4.2-8.5 4.3-8.7-.1 0-7.6-2.9-7.7-11.9Z"/></svg>
-              <span>Apple Music</span>
-            </a>
-            <a class="platform" href="https://open.spotify.com/artist/4uCi0brZ65475k753YaKG0" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="27"/><path class="cut" d="M18 25c10-3 22-2 31 3M20 34c8-2 18-1 26 3M22 42c7-1 14 0 20 3"/></svg>
-              <span>Spotify</span>
-            </a>
-            <a class="platform" href="https://www.youtube.com/channel/UCB_L4vDkhGpfcNPKvk8laMw?sub_confirmation=1" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to Minoo Lakani on YouTube">
-              <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="8" y="15" width="48" height="34" rx="10"/><path class="play-shape" d="M27 24 43 32 27 40Z"/></svg>
-              <span>Subscribe</span>
-            </a>
-          </div>
-          <div class="motto"><p>MUSIC THAT SPEAKS<br>FROM THE HEART</p><div><span></span><b>✦</b><span></span></div></div>
+            <a class="platform" href="https://music.apple.com/us/artist/minoo-lakani/6783251497" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M42.6 13.2c2.6-3 4.3-7.2 3.9-11.2-3.8.2-8.2 2.6-10.9 5.7-2.3 2.6-4.4 6.8-3.9 10.8 4.2.3 8.2-2.1 10.9-5.3ZM51.8 34.1c-.1-7.6 6.2-11.3 6.5-11.5-3.6-5.3-9.2-6-11.2-6.1-4.7-.5-9.3 2.8-11.7 2.8-2.5 0-6.2-2.8-10.2-2.7-5.2.1-10 3-12.7 7.5-5.4 9.3-1.4 23 3.8 30.5 2.6 3.7 5.6 7.8 9.6 7.6 3.9-.2 5.3-2.5 10-2.5 4.6 0 6 2.5 10 2.4 4.2-.1 6.8-3.7 9.3-7.4 3-4.3 4.2-8.5 4.3-8.7-.1 0-7.6-2.9-7.7-11.9Z"/></svg><span>Apple Music</span></a>
+            <a class="platform" href="https://open.spotify.com/artist/4uCi0brZ65475k753YaKG0" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="27"/><path class="cut" d="M18 25c10-3 22-2 31 3M20 34c8-2 18-1 26 3M22 42c7-1 14 0 20 3"/></svg><span>Spotify</span></a>
+            <a class="platform" href="https://www.youtube.com/channel/UCB_L4vDkhGpfcNPKvk8laMw?sub_confirmation=1" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to Minoo Lakani on YouTube"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="8" y="15" width="48" height="34" rx="10"/><path class="play-shape" d="M27 24 43 32 27 40Z"/></svg><span>Subscribe</span></a>
+          </div><div class="motto"><p>MUSIC THAT SPEAKS<br>FROM THE HEART</p><div><span></span><b>✦</b><span></span></div></div>
         </div>
-        <div class="hero-photo"><img src="minoo-photo.webp" alt="Portrait of Minoo Lakani" width="736" height="920" fetchpriority="high" decoding="async"></div>
-        <a class="streaming-card" href="https://distrokid.com/hyperfollow/minoolakani/---5?ref=release" target="_blank" rel="noopener noreferrer">
-          <p class="streaming-label">NOW STREAMING</p>
-          <div class="streaming-inner"><img src="images/gheseye-manoto.jpg" alt="کاور آهنگ قصه من و تو از مینو لکانی" width="600" height="600" loading="lazy" decoding="async"><div><h2 lang="fa" dir="rtl">قصه من و تو</h2><p>NEW PERSIAN SINGLE</p><span>LISTEN NOW</span></div></div>
-        </a>
+        <div class="hero-photo"><img src="minoo-photo.webp" alt="Official portrait of Minoo Lakani, songwriter, producer, and music artist" width="736" height="920" fetchpriority="high" decoding="async"></div>
+        <a class="streaming-card" href="songs/eshgh-o-afsaneh.html"><p class="streaming-label">FEATURED PERSIAN SONG</p><div class="streaming-inner"><img src="images/eshgh-o-afsaneh.jpg" alt="Official cover artwork for عشق و افسانه (Eshgh O Afsaneh) by Minoo Lakani" width="600" height="600" loading="lazy" decoding="async"><div><h2 lang="fa" dir="rtl">عشق و افسانه</h2><p>ESHGH O AFSANEH</p><span>OPEN SONG</span></div></div></a>
       </div>
-
       <section class="songs" id="music-preview">
         <div class="section-line"><span></span><h2>OFFICIAL MUSIC CATALOG</h2><span></span></div>
         <div class="song-grid">
-          <article><a class="song-link" href="songs/tell-me-you-love-me.html"><img class="cover" src="images/tell-me-you-love-me.jpg" alt="Tell Me You Love Me by Minoo Lakani cover artwork" loading="lazy" decoding="async"><h3>Tell Me<br>You Love Me</h3></a></article>
-          <article><a class="song-link" href="songs/eshgh-o-afsaneh.html"><img class="cover" src="images/eshgh-o-afsaneh.jpg" alt="کاور آهنگ عشق و افسانه از مینو لکانی" loading="lazy" decoding="async"><h3><span lang="fa" dir="rtl">عشق و افسانه</span><br>Eshgh O Afsaneh</h3></a></article>
-          <article><a class="song-link" href="songs/dream.html"><img class="cover" src="images/dream.jpg" alt="Dream by Minoo Lakani cover artwork" loading="lazy" decoding="async"><h3>Dream</h3></a></article>
+          <article><a class="song-link" href="songs/eshgh-o-afsaneh.html"><img class="cover" src="images/eshgh-o-afsaneh.jpg" alt="Official cover artwork for عشق و افسانه (Eshgh O Afsaneh) by Minoo Lakani" loading="lazy" decoding="async"><h3><span lang="fa" dir="rtl">عشق و افسانه</span><br>Eshgh O Afsaneh</h3></a></article>
+          <article><a class="song-link" href="songs/dream.html"><img class="cover" src="images/dream.jpg" alt="Official cover artwork for Dream by Minoo Lakani" loading="lazy" decoding="async"><h3>Dream</h3></a></article>
+          <article><a class="song-link" href="songs/tell-me-you-love-me.html"><img class="cover" src="images/tell-me-you-love-me.jpg" alt="Official cover artwork for Tell Me You Love Me by Minoo Lakani" loading="lazy" decoding="async"><h3>Tell Me<br>You Love Me</h3></a></article>
         </div>
         <div style="text-align:center; margin-top:34px;"><a class="outline-link" href="music.html">View All Songs</a></div>
       </section>
     </section>
-
-    <section class="content-section" id="videos">
-      <p class="eyebrow">Watch</p><h2>Latest Videos</h2>
-      <div class="home-video-feature">
-        <a class="home-video-thumbnail" href="https://youtu.be/r25Nsn9ADdc" target="_blank" rel="noopener noreferrer" aria-label="Watch You Broke My Heart by Minoo Lakani on YouTube">
-          <img src="https://img.youtube.com/vi/r25Nsn9ADdc/hqdefault.jpg" alt="You Broke My Heart official lyric video by Minoo Lakani" width="480" height="360" loading="lazy" decoding="async">
-          <span class="home-video-play" aria-hidden="true">▶</span>
-        </a>
-        <div class="home-video-copy">
-          <p class="eyebrow">Featured Video</p>
-          <h3>You Broke My Heart</h3>
-          <p>Watch the official lyric video, then subscribe for new Persian and English songs from Minoo Lakani.</p>
-          <div class="home-video-actions">
-            <a class="outline-link" href="https://youtu.be/r25Nsn9ADdc" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
-            <a class="outline-link" href="https://www.youtube.com/channel/UCB_L4vDkhGpfcNPKvk8laMw?sub_confirmation=1" target="_blank" rel="noopener noreferrer">Subscribe on YouTube</a>
-          </div>
-          <a class="home-video-more" href="videos.html">Explore all official videos →</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="content-section about-section" id="about">
-      <div><p class="eyebrow">About</p><h2>Minoo Lakani</h2></div>
-      <div class="section-copy"><p>Minoo Lakani is an artist, songwriter, producer, and storyteller creating contemporary music with heartfelt lyrics and cinematic concepts.</p><p>Her work connects music and visual storytelling to transform emotion and memory into memorable artistic experiences.</p><p><a class="outline-link" href="about.html">Read the Official Biography</a></p></div>
-    </section>
-
+    <section class="content-section" id="videos"><p class="eyebrow">Watch</p><h2>Featured Music</h2><div class="home-video-feature">
+      <a class="home-video-thumbnail" href="https://youtu.be/UqhHzM4NDR4" target="_blank" rel="noopener noreferrer" aria-label="Listen to America, my home by Minoo Lakani on YouTube"><img src="https://i.ytimg.com/vi/UqhHzM4NDR4/maxresdefault.jpg" alt="America, my home by Minoo Lakani official YouTube release artwork" width="480" height="360" loading="lazy" decoding="async"><span class="home-video-play" aria-hidden="true">▶</span></a>
+      <div class="home-video-copy"><p class="eyebrow">Featured English Release</p><h3>America, My Home</h3><p>Listen to the full English-language release on YouTube, then explore Minoo Lakani’s Persian and English music catalog.</p><div class="home-video-actions"><a class="outline-link" href="https://youtu.be/UqhHzM4NDR4" target="_blank" rel="noopener noreferrer">Listen on YouTube</a><a class="outline-link" href="music.html">Explore All Songs</a></div><a class="home-video-more" href="videos.html">Explore all official videos →</a></div>
+    </div></section>
+    <section class="content-section about-section" id="about"><div><p class="eyebrow">About</p><h2>Minoo Lakani</h2></div><div class="section-copy"><p>Minoo Lakani is an artist, songwriter, producer, and storyteller creating contemporary music with heartfelt lyrics and cinematic concepts.</p><p>Her work connects music and visual storytelling to transform emotion and memory into memorable artistic experiences.</p><p><a class="outline-link" href="about.html">Read the Official Biography</a></p></div></section>
     <section class="content-section" id="gallery"><p class="eyebrow">Visuals</p><h2>Gallery</h2><div class="gallery-grid"><div class="gallery-tile"><span>Studio</span></div><div class="gallery-tile"><span>Music</span></div><div class="gallery-tile"><span>Stories</span></div></div><p><a class="outline-link" href="gallery.html">Open Gallery</a></p></section>
-
     <section class="content-section contact-section" id="contact"><p class="eyebrow">Connect</p><h2>Contact</h2><p>For collaborations, production inquiries, and creative projects, connect through the official channels.</p><div class="contact-links"><a class="outline-link" href="contact.html">Contact Minoo Lakani</a><a class="outline-link" href="https://www.youtube.com/channel/UCB_L4vDkhGpfcNPKvk8laMw?sub_confirmation=1" target="_blank" rel="noopener noreferrer">Subscribe on YouTube</a><a class="outline-link" href="https://open.spotify.com/artist/4uCi0brZ65475k753YaKG0" target="_blank" rel="noopener noreferrer">Spotify</a></div></section>
   </main>
-
   <footer><img src="brand-logo-512.webp" alt="Minoo Lakani Production logo" width="58" height="58" loading="lazy" decoding="async"><p>© 2026 Minoo Lakani. All Rights Reserved.</p></footer>
-  <script>
-    const menuButton = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.nav');
-    menuButton.addEventListener('click', () => { const open = nav.classList.toggle('open'); menuButton.setAttribute('aria-expanded', String(open)); });
-    nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { nav.classList.remove('open'); menuButton.setAttribute('aria-expanded', 'false'); }));
-  </script>
+  <script>const menuButton=document.querySelector('.menu-toggle');const nav=document.querySelector('.nav');menuButton.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open));});nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('open');menuButton.setAttribute('aria-expanded','false');}));</script>
   <script src="chat-widget.js?v=3" defer></script>
 </body>
 </html>
