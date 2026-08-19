@@ -20,13 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.querySelector(".menu-toggle");
   const navigation = document.querySelector(".nav");
 
-  const ghostCard = document.querySelector('a[href="songs/ghost-of-you.html"]');
-  const ghostImage = ghostCard?.querySelector(".catalog-cover");
-  if (ghostImage) {
-    ghostImage.src = "https://img.youtube.com/vi/ln9XzcbFAcM/maxresdefault.jpg";
-    ghostImage.alt = "Ghost of You by Minoo Lakani — beach sunset official artwork";
-  }
-
   let activeFilter = "All";
   let searchTerm = "";
 
