@@ -17,6 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const filterButtons = Array.from(
     document.querySelectorAll(".filter-button")
   );
+  const playlistButtons = Array.from(
+    document.querySelectorAll("[data-playlist-filter]")
+  );
   const menuToggle = document.querySelector(".menu-toggle");
   const navigation = document.querySelector(".nav");
 
@@ -36,6 +39,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function pluralizeSongs(total) {
     return `${total} ${total === 1 ? "Song" : "Songs"}`;
+  }
+
+  function setActiveFilter(filter) {
+    activeFilter = filter || "All";
+
+    filterButtons.forEach((filterButton) => {
+      const isActive = filterButton.dataset.filter === activeFilter;
+      filterButton.classList.toggle("active", isActive);
+      filterButton.setAttribute("aria-pressed", String(isActive));
+    });
+
+    playlistButtons.forEach((playlistButton) => {
+      const isActive = playlistButton.dataset.playlistFilter === activeFilter;
+      playlistButton.classList.toggle("active", isActive);
+      playlistButton.setAttribute("aria-pressed", String(isActive));
+    });
   }
 
   function updateCatalog() {
@@ -137,15 +156,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   filterButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      activeFilter = button.dataset.filter || "All";
-
-      filterButtons.forEach((filterButton) => {
-        const isActive = filterButton === button;
-        filterButton.classList.toggle("active", isActive);
-        filterButton.setAttribute("aria-pressed", String(isActive));
-      });
-
+      setActiveFilter(button.dataset.filter || "All");
       updateCatalog();
+    });
+  });
+
+  playlistButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      if (searchInput) searchInput.value = "";
+      searchTerm = "";
+      setActiveFilter(button.dataset.playlistFilter || "All");
+      updateCatalog();
+
+      const targetId = button.dataset.playlistTarget || "catalog-title";
+      const target = document.getElementById(targetId) || document.getElementById("catalog-title");
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     });
   });
 
@@ -156,5 +183,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  setActiveFilter("All");
   updateCatalog();
 });

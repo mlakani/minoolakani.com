@@ -59,6 +59,155 @@
   gap: 12px;
 }
 
+.playlist-hub {
+  padding: clamp(58px, 7vw, 92px) clamp(20px, 5vw, 80px);
+  background:
+    radial-gradient(circle at 82% 15%, rgba(237, 203, 125, 0.11), transparent 27%),
+    linear-gradient(180deg, rgba(74, 52, 40, 0.98), rgba(38, 25, 19, 0.98));
+  border-bottom: 1px solid var(--border-gold);
+}
+
+.playlist-heading {
+  width: min(1400px, 100%);
+  margin: 0 auto 34px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.playlist-heading h2 {
+  margin: 0;
+  color: var(--light-cream);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  font-weight: 500;
+  line-height: 0.95;
+}
+
+.playlist-heading > p {
+  width: min(510px, 100%);
+  margin: 0;
+  color: var(--soft-white);
+  line-height: 1.75;
+}
+
+.playlist-grid {
+  width: min(1400px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.playlist-card {
+  min-width: 0;
+  padding: 0;
+  overflow: hidden;
+  display: block;
+  color: inherit;
+  text-align: left;
+  background: linear-gradient(155deg, rgba(91, 65, 48, 0.9), rgba(18, 12, 9, 0.98));
+  border: 1px solid rgba(215, 168, 76, 0.38);
+  border-radius: 20px;
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.28);
+  cursor: pointer;
+  font: inherit;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.playlist-card:hover,
+.playlist-card:focus-visible {
+  transform: translateY(-7px);
+  border-color: var(--soft-gold);
+  box-shadow: 0 27px 50px rgba(0, 0, 0, 0.4);
+  outline: none;
+}
+
+.playlist-card.active {
+  border-color: var(--soft-gold);
+  box-shadow: 0 0 0 2px rgba(237, 203, 125, 0.18), 0 27px 50px rgba(0, 0, 0, 0.4);
+}
+
+.playlist-art {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  display: grid;
+  background: #120c09;
+}
+
+.playlist-art--collage { grid-template-columns: repeat(3, 1fr); }
+.playlist-art--single { grid-template-columns: 1fr; }
+
+.playlist-art img {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  object-fit: cover;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.playlist-card:hover .playlist-art img,
+.playlist-card:focus-visible .playlist-art img {
+  transform: scale(1.035);
+  opacity: 0.9;
+}
+
+.playlist-copy {
+  min-height: 205px;
+  padding: 22px 21px 23px;
+  display: flex;
+  flex-direction: column;
+}
+
+.playlist-label {
+  margin-bottom: 11px;
+  color: var(--gold);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.playlist-copy strong {
+  color: var(--light-cream);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+  font-weight: 500;
+  line-height: 1.02;
+}
+
+.playlist-copy strong span {
+  color: var(--soft-gold);
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 0.58em;
+  line-height: 1.6;
+}
+
+.playlist-copy > span:not(.playlist-label) {
+  margin-top: 11px;
+  color: var(--soft-white);
+  font-size: 0.74rem;
+  line-height: 1.55;
+}
+
+.playlist-copy em {
+  margin-top: auto;
+  padding-top: 21px;
+  color: var(--soft-gold);
+  font-size: 0.62rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+#catalog-title,
+.catalog-language-section h2 {
+  scroll-margin-top: 110px;
+}
+
 .catalog-section {
   padding: clamp(60px, 7vw, 100px) clamp(20px, 5vw, 80px) clamp(85px, 9vw, 130px);
   background:
@@ -322,11 +471,13 @@
 }
 
 @media (max-width: 1100px) {
+  .playlist-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .catalog-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 @media (max-width: 780px) {
   .catalog-hero { min-height: 330px; }
+  .playlist-heading { align-items: flex-start; flex-direction: column; gap: 16px; }
   .catalog-heading { align-items: flex-start; }
   .catalog-controls { align-items: stretch; flex-direction: column; }
   .search-box { width: 100%; }
@@ -338,6 +489,9 @@
 
 @media (max-width: 520px) {
   .catalog-hero { padding-left: 18px; padding-right: 18px; }
+  .playlist-hub { padding-left: 15px; padding-right: 15px; }
+  .playlist-grid { grid-template-columns: 1fr; gap: 16px; }
+  .playlist-copy { min-height: 176px; }
   .catalog-section { padding-left: 15px; padding-right: 15px; }
   .catalog-heading { gap: 12px; }
   .catalog-grid { gap: 15px; }
