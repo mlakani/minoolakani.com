@@ -11,6 +11,16 @@
 
 window.songCatalog = [
   {
+    id: "khakestare-eshgh",
+    title: "خاکستر عشق",
+    alternateTitle: "Khakestare Eshgh · The Ashes of Love",
+    image: "https://img.youtube.com/vi/p1r88E7k9g4/maxresdefault.jpg",
+    link: "https://www.youtube.com/watch?v=p1r88E7k9g4",
+    language: "Persian",
+    featured: true
+  },
+
+  {
     id: "ghesye-manoto",
     title: "قصه من و تو",
     alternateTitle: "Ghesye Manoto",
