@@ -11,6 +11,16 @@
 
 window.songCatalog = [
   {
+    id: "the-story-of-us",
+    title: "The Story of Us!",
+    alternateTitle: "",
+    image: "https://img.youtube.com/vi/wSPxlL19t-U/maxresdefault.jpg",
+    link: "https://www.youtube.com/watch?v=wSPxlL19t-U",
+    language: "English",
+    featured: true
+  },
+
+  {
     id: "khakestare-eshgh",
     title: "خاکستر عشق",
     alternateTitle: "Khakestare Eshgh · The Ashes of Love",
