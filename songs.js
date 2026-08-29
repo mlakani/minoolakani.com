@@ -11,6 +11,16 @@
 
 window.songCatalog = [
   {
+    id: "imagine-tomorrow",
+    title: "Imagine Tomorrow",
+    alternateTitle: "",
+    image: "https://img.youtube.com/vi/2BzhrXSh9HY/maxresdefault.jpg",
+    link: "https://www.youtube.com/watch?v=2BzhrXSh9HY",
+    language: "English",
+    featured: true
+  },
+
+  {
     id: "the-story-of-us",
     title: "The Story of Us!",
     alternateTitle: "",
