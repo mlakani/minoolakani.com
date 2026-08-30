@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const youtubeByPage = {
     "imagine-tomorrow.html": "https://www.youtube.com/watch?v=2BzhrXSh9HY",
     "the-story-of-us.html": "https://www.youtube.com/watch?v=wSPxlL19t-U",
+    "you-broke-my-heart.html": "https://www.youtube.com/watch?v=r25Nsn9ADdc",
     "khakestare-eshgh.html": "https://www.youtube.com/watch?v=p1r88E7k9g4",
     "dream.html": "https://www.youtube.com/watch?v=yX3tIs7DEGs",
     "my-own-heart.html": "https://www.youtube.com/watch?v=G5dfKaHd3hM",

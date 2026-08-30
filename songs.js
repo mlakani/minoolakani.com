@@ -31,6 +31,16 @@ window.songCatalog = [
   },
 
   {
+    id: "you-broke-my-heart",
+    title: "You Broke My Heart",
+    alternateTitle: "",
+    image: "https://img.youtube.com/vi/r25Nsn9ADdc/maxresdefault.jpg",
+    link: "https://www.youtube.com/watch?v=r25Nsn9ADdc",
+    language: "English",
+    featured: true
+  },
+
+  {
     id: "khakestare-eshgh",
     title: "خاکستر عشق",
     alternateTitle: "Khakestare Eshgh · The Ashes of Love",
