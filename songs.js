@@ -11,6 +11,16 @@
 
 window.songCatalog = [
   {
+    id: "the-ashes-of-love",
+    title: "The Ashes of Love",
+    alternateTitle: "When the One You Love Walks Away",
+    image: "https://img.youtube.com/vi/ekgyURBfQ-U/maxresdefault.jpg",
+    link: "https://www.youtube.com/watch?v=ekgyURBfQ-U",
+    language: "English",
+    featured: true
+  },
+
+  {
     id: "imagine-tomorrow",
     title: "Imagine Tomorrow",
     alternateTitle: "",
