@@ -11,6 +11,16 @@
 
 window.songCatalog = [
   {
+    id: "to-mesle-sayeh-ba-mani",
+    title: "تو مثل سایه با منی",
+    alternateTitle: "To Mesle Sayeh Ba Mani · You Are With Me Like a Shadow",
+    image: "https://img.youtube.com/vi/4p1kZNJ7XM0/maxresdefault.jpg",
+    link: "https://www.youtube.com/watch?v=4p1kZNJ7XM0",
+    language: "Persian",
+    featured: true
+  },
+
+  {
     id: "the-ashes-of-love",
     title: "The Ashes of Love",
     alternateTitle: "When the One You Love Walks Away",
