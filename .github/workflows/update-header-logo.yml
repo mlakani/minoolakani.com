@@ -8,12 +8,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Replace header logo with animated GIF
+      - name: Fix remaining old-logo headers
         run: |
-          grep -rl 'brand-logo-512\.webp" alt="Minoo Lakani Production logo"' --include='*.html' . | while read -r f; do
-            sed -E -i 's|<img src="(\.\./)?brand-logo-512\.webp" alt="Minoo Lakani Production logo"( width="58" height="58" decoding="async")?><span>|<img src="\1images/music-live-logo-header.gif" alt="Minoo Lakani Production logo"\2><span>|g' "$f"
+          grep -rl 'brand-logo-512[.]webp' --include='*.html' . | while read -r f; do
+            sed -i '/brand-logo-512[.]webp"[^>]*><span>/{s|src="[.][.]/brand-logo-512[.]webp"|src="../images/music-live-logo-header.gif"|;s|src="brand-logo-512[.]webp"|src="images/music-live-logo-header.gif"|}' "$f"
           done
           git diff --stat
+          echo "=== old-logo header refs remaining (expect none) ==="
+          grep -rn 'brand-logo-512[.]webp"[^>]*><span>' --include='*.html' . || echo "none found"
       - name: Commit and push
         run: |
           git config user.name "mlakani"
