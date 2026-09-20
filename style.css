@@ -443,26 +443,7 @@ a {
 }
 
 .hero-photo::before {
-  content: "";
-  position: absolute;
-  width: 82%;
-  height: 82%;
-  bottom: 1%;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 48% 48% 4% 4%;
-  background:
-    radial-gradient(
-      circle at 50% 28%,
-      rgba(255, 230, 177, 0.18),
-      transparent 48%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(222, 173, 92, 0.09),
-      rgba(0, 0, 0, 0.06)
-    );
-  border: 1px solid rgba(237, 203, 125, 0.1);
+    display: none;
 }
 
 .hero-photo img {
