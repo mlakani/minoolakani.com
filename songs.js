@@ -54,8 +54,8 @@ window.songCatalog = [
     id: "you-broke-my-heart",
     title: "You Broke My Heart",
     alternateTitle: "",
-    image: "https://img.youtube.com/vi/r25Nsn9ADdc/maxresdefault.jpg",
-    link: "https://www.youtube.com/watch?v=r25Nsn9ADdc",
+    image: "https://img.youtube.com/vi/6nn4Xe2Vxeo/maxresdefault.jpg",
+    link: "https://www.youtube.com/watch?v=6nn4Xe2Vxeo",
     language: "English",
     featured: true
   },
