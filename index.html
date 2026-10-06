@@ -64,6 +64,20 @@
  #home .streaming-inner h2 { font-size: 1.7rem; overflow-wrap: anywhere; }
 }
 
+
+/* Slogan shares the channel card's width and center line. */
+#home .hero-grid > .motto { grid-column: 1 / -1; width: min(680px, 100%); max-width: 680px; margin: 8px auto 0; text-align: center; justify-self: center; }
+#home .hero-grid > .motto p { font-family: Arial, Helvetica, sans-serif; font-size: clamp(.9rem, 1.5vw, 1.35rem); font-weight: 500; line-height: 1.5; letter-spacing: .08em; text-wrap: balance; }
+#home .streaming-inner { display: grid; grid-template-columns: minmax(0, 180px) minmax(0, 1fr); align-items: center; gap: 22px; }
+#home .streaming-inner > img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; border-radius: 10px; }
+#home .streaming-inner > div { min-width: 0; }
+#home .streaming-inner h2 { font-size: clamp(1.4rem, 2.5vw, 2.2rem); line-height: 1.2; overflow-wrap: anywhere; }
+#home .streaming-inner p { line-height: 1.5; letter-spacing: .08em; }
+@media (max-width: 480px) {
+ #home .streaming-inner { grid-template-columns: minmax(0, 1fr); text-align: center; }
+ #home .streaming-inner > img { max-width: 260px; justify-self: center; }
+}
+
 </style>
   <script type="application/ld+json">
   {
@@ -106,10 +120,11 @@
             <a class="platform" href="https://music.apple.com/us/artist/minoo-lakani/6783251497" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M42.6 13.2c2.6-3 4.3-7.2 3.9-11.2-3.8.2-8.2 2.6-10.9 5.7-2.3 2.6-4.4 6.8-3.9 10.8 4.2.3 8.2-2.1 10.9-5.3ZM51.8 34.1c-.1-7.6 6.2-11.3 6.5-11.5-3.6-5.3-9.2-6-11.2-6.1-4.7-.5-9.3 2.8-11.7 2.8-2.5 0-6.2-2.8-10.2-2.7-5.2.1-10 3-12.7 7.5-5.4 9.3-1.4 23 3.8 30.5 2.6 3.7 5.6 7.8 9.6 7.6 3.9-.2 5.3-2.5 10-2.5 4.6 0 6 2.5 10 2.4 4.2-.1 6.8-3.7 9.3-7.4 3-4.3 4.2-8.5 4.3-8.7-.1 0-7.6-2.9-7.7-11.9Z"/></svg><span>Apple Music</span></a>
             <a class="platform" href="https://open.spotify.com/artist/4uCi0brZ65475k753YaKG0" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="27"/><path class="cut" d="M18 25c10-3 22-2 31 3M20 34c8-2 18-1 26 3M22 42c7-1 14 0 20 3"/></svg><span>Spotify</span></a>
             <a class="platform" href="https://www.youtube.com/channel/UCB_L4vDkhGpfcNPKvk8laMw?sub_confirmation=1" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to Minoo Lakani on YouTube"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="8" y="15" width="48" height="34" rx="10"/><path class="play-shape" d="M27 24 43 32 27 40Z"/></svg><span>Subscribe</span></a>
-          </div><div class="motto"><p>MUSIC THAT SPEAKS<br>FROM THE HEART</p><div><span></span><b>✦</b><span></span></div></div>
+          </div>
         </div>
         <div class="hero-photo"><img src="minoo-photo.webp" alt="Official portrait of Minoo Lakani, songwriter, producer, and music artist" width="736" height="920" fetchpriority="high" decoding="async"></div>
-        <a class="streaming-card" href="https://www.youtube.com/@minoolakanimusic/videos" target="_blank" rel="noopener noreferrer"><p class="streaming-label">MY YOUTUBE CHANNEL</p><div class="streaming-inner"><img src="https://img.youtube.com/vi/ru-9M3HLHXQ/hqdefault.jpg" alt="Minoo Lakani music videos" width="480" height="360" loading="lazy" decoding="async"><div><h2>MinooLakani Music</h2><p>MUSIC VIDEOS &amp; LYRIC VIDEOS</p><span>WATCH MY CHANNEL ↗</span></div></div></a>
+        <div class="motto"><p>MUSIC THAT SPEAKS FROM THE HEART</p></div>
+        <a class="streaming-card" href="https://www.youtube.com/@minoolakanimusic/videos" target="_blank" rel="noopener noreferrer"><p class="streaming-label">MY YOUTUBE CHANNEL</p><div class="streaming-inner"><img src="https://img.youtube.com/vi/ru-9M3HLHXQ/mqdefault.jpg" alt="Minoo Lakani music videos" width="320" height="180" loading="lazy" decoding="async"><div><h2>MinooLakani Music</h2><p>MUSIC VIDEOS &amp; LYRIC VIDEOS</p><span>WATCH MY CHANNEL ↗</span></div></div></a>
       </div>
       <section class="songs" id="music-preview" aria-labelledby="my-videos-title"><div class="section-line"><span></span><h2 id="my-videos-title">WATCH MY MUSIC VIDEOS</h2><span></span></div><p style="text-align:center">Persian and English videos from MinooLakani Music. Choose a song to watch on my YouTube channel.</p><div class="song-grid"><article><a class="song-link" href="https://www.youtube.com/watch?v=ru-9M3HLHXQ" target="_blank" rel="noopener noreferrer"><img class="cover" src="https://img.youtube.com/vi/ru-9M3HLHXQ/mqdefault.jpg" alt="Ghesseh Mano To · قصه من و تو — Minoo Lakani music video" width="320" height="180" loading="lazy" decoding="async"><h3>Ghesseh Mano To · قصه من و تو</h3><span>Watch on YouTube ↗</span></a></article>
 <article><a class="song-link" href="https://www.youtube.com/watch?v=MIBx0eY3fIM" target="_blank" rel="noopener noreferrer"><img class="cover" src="https://img.youtube.com/vi/MIBx0eY3fIM/mqdefault.jpg" alt="The Story of Us! — Minoo Lakani music video" width="320" height="180" loading="lazy" decoding="async"><h3>The Story of Us!</h3><span>Watch on YouTube ↗</span></a></article>
