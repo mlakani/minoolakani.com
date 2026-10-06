@@ -183,6 +183,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  setActiveFilter("All");
-  updateCatalog();
+  function applyCategoryHash() {
+    const category = { "#persian-songs": "Persian", "#english-songs": "English", "#spanish-songs": "Spanish" }[window.location.hash] || "All";
+    searchTerm = "";
+    if (searchInput) searchInput.value = "";
+    setActiveFilter(category);
+    updateCatalog();
+  }
+  window.addEventListener("hashchange", applyCategoryHash);
+  applyCategoryHash();
 });
