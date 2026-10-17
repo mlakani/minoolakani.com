@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const footer = document.querySelector("footer");
 
   const youtubeByPage = {
-    "az-koocheh-ta-kooch.html": "https://www.youtube.com/watch?v=dgY8I1KMscI",
+    "az-koocheh-ta-kooch.html": "https://www.youtube.com/watch?v=kCeTin7j7qE",
     "imagine-tomorrow.html": "https://www.youtube.com/watch?v=2BzhrXSh9HY",
     "the-story-of-us.html": "https://www.youtube.com/watch?v=wSPxlL19t-U",
     "you-broke-my-heart.html": "https://www.youtube.com/watch?v=6nn4Xe2Vxeo",

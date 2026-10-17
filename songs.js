@@ -10,7 +10,7 @@
 */
 
 window.songCatalog = [
-  {"id":"az-koocheh-ta-kooch","title":"از کوچه تا کوچ","alternateTitle":"Az Koocheh Ta Kooch","image":"https://img.youtube.com/vi/dgY8I1KMscI/hqdefault.jpg","link":"https://www.youtube.com/watch?v=dgY8I1KMscI","language":"Persian","featured":true},
+  {"id":"az-koocheh-ta-kooch","title":"از کوچه تا کوچ","alternateTitle":"Az Koocheh Ta Kooch","image":"https://img.youtube.com/vi/kCeTin7j7qE/hqdefault.jpg","link":"https://www.youtube.com/watch?v=kCeTin7j7qE","language":"Persian","featured":true},
   {"id":"still","title":"Still","alternateTitle":"","image":"https://img.youtube.com/vi/digtx7S56VI/hqdefault.jpg","link":"https://www.youtube.com/watch?v=digtx7S56VI","language":"English","featured":true},
   {"id":"hanooz","title":"هنوز","alternateTitle":"Hanooz · Still","image":"https://img.youtube.com/vi/Y_MwNO4fPto/hqdefault.jpg","link":"https://www.youtube.com/watch?v=Y_MwNO4fPto","language":"Persian","featured":true},
   {"id":"the-end","title":"The End","alternateTitle":"","image":"https://img.youtube.com/vi/g7ldVGxDma8/hqdefault.jpg","link":"https://www.youtube.com/watch?v=g7ldVGxDma8","language":"English","featured":true},
