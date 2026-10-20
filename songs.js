@@ -49,8 +49,8 @@ window.songCatalog = [
     id: "the-story-of-us",
     title: "The Story of Us!",
     alternateTitle: "",
-    image: "https://img.youtube.com/vi/wSPxlL19t-U/maxresdefault.jpg",
-    link: "https://www.youtube.com/watch?v=wSPxlL19t-U",
+    image: "https://img.youtube.com/vi/MIBx0eY3fIM/maxresdefault.jpg",
+    link: "https://www.youtube.com/watch?v=MIBx0eY3fIM",
     language: "English",
     featured: true
   },
