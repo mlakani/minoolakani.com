@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const footer = document.querySelector("footer");
 
   const youtubeByPage = {
-    "az-koocheh-ta-kooch.html": "https://www.youtube.com/watch?v=kCeTin7j7qE",
+    "az-koocheh-ta-kooch.html": "https://www.youtube.com/watch?v=tGeTemwFBaw",
     "imagine-tomorrow.html": "https://www.youtube.com/watch?v=2BzhrXSh9HY",
     "the-story-of-us.html": "https://www.youtube.com/watch?v=MIBx0eY3fIM",
     "you-broke-my-heart.html": "https://www.youtube.com/watch?v=6nn4Xe2Vxeo",
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "dream.html": "https://www.youtube.com/watch?v=yX3tIs7DEGs",
     "my-own-heart.html": "https://www.youtube.com/watch?v=G5dfKaHd3hM",
     "tell-me-you-love-me.html": "https://www.youtube.com/watch?v=WIdqgvEyUHo",
-    "ghost-of-you.html": "https://www.youtube.com/watch?v=pcb3RzsnrhI",
+    "ghost-of-you.html": "https://www.youtube.com/watch?v=GuPPnzIfkuo",
     "america-my-home.html": "https://www.youtube.com/watch?v=UqhHzM4NDR4",
     "corazon-con-corazon.html": "https://www.youtube.com/watch?v=cjG7mWh01mU",
     "ghesye-manoto.html": "https://www.youtube.com/watch?v=h9TM3NI-89o",
