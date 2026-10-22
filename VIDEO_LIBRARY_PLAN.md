@@ -19,7 +19,7 @@ This document records the approved format and expansion rules for the official v
 ## Current featured videos
 
 1. I Own My Heart — https://youtu.be/vO9qvra4A0g
-2. Ghost of You — https://youtu.be/GuPPnzIfkuo
+2. Ghost of You — https://youtu.be/xWZJaSRJ-38
 3. Delamo Shekasti — https://youtu.be/P3IGulIgkuA
 
 ## Rules when adding more videos
