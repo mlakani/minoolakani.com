@@ -10,6 +10,7 @@
 */
 
 window.songCatalog = [
+  {"id":"ey-kaash","title":"ای کاش","alternateTitle":"Ey Kaash · If Only","image":"https://img.youtube.com/vi/Tz7oE8GbvTE/hqdefault.jpg","link":"https://www.youtube.com/watch?v=Tz7oE8GbvTE","language":"Persian","featured":true},
   {"id":"ghost-of-you","title":"Ghost of You","alternateTitle":"","image":"https://img.youtube.com/vi/dXSMVdm0-Ro/hqdefault.jpg","link":"https://www.youtube.com/watch?v=dXSMVdm0-Ro","language":"English","featured":true},
   {"id":"az-koocheh-ta-kooch","title":"از کوچه تا کوچ","alternateTitle":"Az Koocheh Ta Kooch","image":"https://img.youtube.com/vi/tGeTemwFBaw/hqdefault.jpg","link":"https://www.youtube.com/watch?v=tGeTemwFBaw","language":"Persian","featured":true},
   {"id":"still","title":"Still","alternateTitle":"","image":"https://img.youtube.com/vi/digtx7S56VI/hqdefault.jpg","link":"https://www.youtube.com/watch?v=digtx7S56VI","language":"English","featured":true},
@@ -196,3 +197,4 @@ window.songCatalog = [
     featured: true
   },
 ];
+

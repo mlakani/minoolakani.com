@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const footer = document.querySelector("footer");
 
   const youtubeByPage = {
+    "ey-kaash.html": "https://www.youtube.com/watch?v=Tz7oE8GbvTE",
     "az-koocheh-ta-kooch.html": "https://www.youtube.com/watch?v=tGeTemwFBaw",
     "imagine-tomorrow.html": "https://www.youtube.com/watch?v=2BzhrXSh9HY",
     "the-story-of-us.html": "https://www.youtube.com/watch?v=MIBx0eY3fIM",
@@ -101,3 +102,4 @@ document.addEventListener("DOMContentLoaded", () => {
   const relatedSongs=document.querySelector(".related-songs"); if(relatedSongs&&!document.querySelector(".youtube-subscribe-section")){ const subscribeSection=document.createElement("section"); subscribeSection.className="youtube-subscribe-section"; subscribeSection.setAttribute("aria-labelledby","youtube-subscribe-title"); subscribeSection.innerHTML=`<div class="youtube-subscribe-inner"><p class="eyebrow">Hear the next song first</p><h2 id="youtube-subscribe-title">Subscribe on YouTube</h2><p>Follow Minoo Lakani for new Persian, English, and Spanish songs, lyric videos, and visual stories.</p><p class="youtube-subscribe-persian" lang="fa" dir="rtl">برای شنیدن ترانه‌های تازهٔ فارسی و انگلیسی، کانال رسمی مینو لکانی را دنبال کنید.</p><a class="song-action song-action-primary" href="https://www.youtube.com/channel/UCB_L4vDkhGpfcNPKvk8laMw?sub_confirmation=1" target="_blank" rel="noopener noreferrer">Subscribe on YouTube</a></div>`; relatedSongs.before(subscribeSection); }
   if(!document.querySelector('script[data-minoo-chat]')){const chat=document.createElement("script");chat.src="../chat-widget.js?v=3";chat.defer=true;chat.dataset.minooChat="true";document.body.appendChild(chat);}
 });
+
