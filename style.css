@@ -1433,3 +1433,14 @@ footer p {
 @media (max-width: 480px) {
   .text-me-btn { right: 16px; bottom: 18px; padding: 12px 16px; font-size: 15px; }
 }
+
+/* Song titles stay clean, including Persian lettering; underline only the action. */
+.song-link,
+.song-link:hover,
+.song-link:focus-visible {
+  text-decoration: none;
+}
+.song-link > span:last-child {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
