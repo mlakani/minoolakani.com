@@ -118,6 +118,12 @@ body.interior-page {
   object-position: center;
 }
 
+.profile-card--landscape img {
+  aspect-ratio: 16 / 9;
+  height: auto;
+  object-fit: contain;
+}
+
 .profile-card-copy {
   padding: 24px;
 }
