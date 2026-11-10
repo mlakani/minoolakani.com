@@ -133,6 +133,29 @@ body.interior-page {
   font-size: 0.88rem;
 }
 
+.biography-flow {
+  display: flow-root;
+}
+
+.biography-flow > .profile-card {
+  float: left;
+  width: min(40%, 420px);
+  margin: 0 clamp(28px, 5vw, 64px) 24px 0;
+}
+
+.biography-flow > p {
+  max-width: none;
+}
+
+.biography-flow > .button-row {
+  clear: both;
+}
+
+.biography-flow .profile-card .outline-link {
+  max-width: 100%;
+  text-align: center;
+}
+
 .fact-grid,
 .card-grid,
 .press-grid,
@@ -382,6 +405,12 @@ body.interior-page {
 
   .page-hero {
     padding-top: 64px;
+  }
+
+  .biography-flow > .profile-card {
+    float: none;
+    width: min(100%, 520px);
+    margin: 0 auto 32px;
   }
 
   .two-column,
