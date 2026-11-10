@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "ghashangtarin-dalil.html": "https://www.youtube.com/watch?v=2sFA149pHDM",
     "khaterate-to.html": "https://www.youtube.com/watch?v=AvKesDc-OB8",
     "harfe-negah.html": "https://www.youtube.com/watch?v=-CQ_N-XT3XI",
-    "iran-khaneh-mast.html": "https://www.youtube.com/watch?v=kJn6pnlasko"
+    "iran-khaneh-mast.html": "https://www.youtube.com/watch?v=P40Fgp4iJpM"
   };
 
   const currentPage = location.pathname.split("/").pop();
@@ -104,5 +104,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const relatedSongs=document.querySelector(".related-songs"); if(relatedSongs&&!document.querySelector(".youtube-subscribe-section")){ const subscribeSection=document.createElement("section"); subscribeSection.className="youtube-subscribe-section"; subscribeSection.setAttribute("aria-labelledby","youtube-subscribe-title"); subscribeSection.innerHTML=`<div class="youtube-subscribe-inner"><p class="eyebrow">Hear the next song first</p><h2 id="youtube-subscribe-title">Subscribe on YouTube</h2><p>Follow Minoo Lakani for new Persian, English, and Spanish songs, lyric videos, and visual stories.</p><p class="youtube-subscribe-persian" lang="fa" dir="rtl">برای شنیدن ترانه‌های تازهٔ فارسی و انگلیسی، کانال رسمی مینو لکانی را دنبال کنید.</p><a class="song-action song-action-primary" href="https://www.youtube.com/channel/UCB_L4vDkhGpfcNPKvk8laMw?sub_confirmation=1" target="_blank" rel="noopener noreferrer">Subscribe on YouTube</a></div>`; relatedSongs.before(subscribeSection); }
   if(!document.querySelector('script[data-minoo-chat]')){const chat=document.createElement("script");chat.src="../chat-widget.js?v=3";chat.defer=true;chat.dataset.minooChat="true";document.body.appendChild(chat);}
 });
+
 
 
