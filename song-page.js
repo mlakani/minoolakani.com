@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "ghashangtarin-dalil.html": "https://www.youtube.com/watch?v=2sFA149pHDM",
     "khaterate-to.html": "https://www.youtube.com/watch?v=AvKesDc-OB8",
     "harfe-negah.html": "https://www.youtube.com/watch?v=-CQ_N-XT3XI",
-    "iran-khaneh-mast.html": "https://www.youtube.com/watch?v=P40Fgp4iJpM"
+    "iran-khaneh-mast.html": "https://www.youtube.com/watch?v=KUIltSGY-nA"
   };
 
   const currentPage = location.pathname.split("/").pop();
