@@ -11,8 +11,6 @@
 
 window.songCatalog = [
   {"id":"chashm-be-raah","title":"چشم به راه","alternateTitle":"Chashm Be Raah","image":"https://img.youtube.com/vi/4gwBLr6KUhE/hqdefault.jpg","link":"https://www.youtube.com/watch?v=4gwBLr6KUhE","language":"Persian","featured":true},
-  {"id":"iran-khaneh-mast","title":"ایران خانه ماست","alternateTitle":"Iran Is Our Home · Iran Khaneh Mast","image":"https://img.youtube.com/vi/KUIltSGY-nA/hqdefault.jpg","link":"https://www.youtube.com/watch?v=KUIltSGY-nA","language":"Persian","featured":true},
-  {"id":"mehre-mihan","title":"مهر میهن","alternateTitle":"Mehre Mihan","image":"https://img.youtube.com/vi/S6yKl-rR8Qg/hqdefault.jpg","link":"https://www.youtube.com/watch?v=S6yKl-rR8Qg","language":"Persian","featured":true},
   {"id":"havasraan","title":"هوس‌ران","alternateTitle":"Havasraan","image":"https://img.youtube.com/vi/s8l7hTTNRqc/hqdefault.jpg","link":"https://www.youtube.com/watch?v=s8l7hTTNRqc","language":"Persian","featured":true},
   {"id":"ey-kaash","title":"ای کاش","alternateTitle":"Ey Kaash · If Only","image":"https://img.youtube.com/vi/P9i5Nqz9EfM/hqdefault.jpg","link":"https://www.youtube.com/watch?v=P9i5Nqz9EfM","language":"Persian","featured":true},
   {"id":"ghost-of-you","title":"Ghost of You","alternateTitle":"","image":"https://img.youtube.com/vi/dXSMVdm0-Ro/hqdefault.jpg","link":"https://www.youtube.com/watch?v=dXSMVdm0-Ro","language":"English","featured":true},
