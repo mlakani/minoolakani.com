@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const youtubeByPage = {
     "chashm-be-raah.html": "https://www.youtube.com/watch?v=4gwBLr6KUhE",
-    "mehre-mihan.html": "https://www.youtube.com/watch?v=S6yKl-rR8Qg",
     "havasraan.html": "https://www.youtube.com/watch?v=s8l7hTTNRqc",
     "ey-kaash.html": "https://www.youtube.com/watch?v=P9i5Nqz9EfM",
     "az-koocheh-ta-kooch.html": "https://www.youtube.com/watch?v=tGeTemwFBaw",
@@ -31,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
     "ghashangtarin-dalil.html": "https://www.youtube.com/watch?v=2sFA149pHDM",
     "khaterate-to.html": "https://www.youtube.com/watch?v=AvKesDc-OB8",
     "harfe-negah.html": "https://www.youtube.com/watch?v=-CQ_N-XT3XI",
-    "iran-khaneh-mast.html": "https://www.youtube.com/watch?v=KUIltSGY-nA"
   };
 
   const currentPage = location.pathname.split("/").pop();
