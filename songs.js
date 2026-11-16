@@ -113,8 +113,8 @@ window.songCatalog = [
     id: "tell-me-you-love-me",
     title: "Tell Me You Love Me",
     alternateTitle: "",
-    image: "images/tell-me-you-love-me.jpg",
-    link: "https://distrokid.com/hyperfollow/minoolakani/tell-me-you-love-me-2?ref=release",
+    image: "https://img.youtube.com/vi/Z6lEHESYk6s/hqdefault.jpg",
+    link: "https://www.youtube.com/watch?v=Z6lEHESYk6s",
     language: "English",
     featured: true
   },
