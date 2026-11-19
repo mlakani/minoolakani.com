@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const footer = document.querySelector("footer");
 
   const youtubeByPage = {
+    "the-player.html": "https://www.youtube.com/watch?v=7u_SIbn5dvo",
     "chashm-be-raah.html": "https://www.youtube.com/watch?v=TKLhv2MNVok",
     "havasraan.html": "https://www.youtube.com/watch?v=s8l7hTTNRqc",
     "ey-kaash.html": "https://www.youtube.com/watch?v=P9i5Nqz9EfM",

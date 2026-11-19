@@ -10,6 +10,7 @@
 */
 
 window.songCatalog = [
+  {"id":"the-player","title":"The Player","alternateTitle":"","image":"https://img.youtube.com/vi/7u_SIbn5dvo/hqdefault.jpg","link":"https://www.youtube.com/watch?v=7u_SIbn5dvo","language":"English","featured":true},
   {"id":"chashm-be-raah","title":"چشم به راه","alternateTitle":"Chashm Be Raah","image":"https://img.youtube.com/vi/TKLhv2MNVok/hqdefault.jpg","link":"https://www.youtube.com/watch?v=TKLhv2MNVok","language":"Persian","featured":true},
   {"id":"havasraan","title":"هوس‌ران","alternateTitle":"Havasraan","image":"https://img.youtube.com/vi/s8l7hTTNRqc/hqdefault.jpg","link":"https://www.youtube.com/watch?v=s8l7hTTNRqc","language":"Persian","featured":true},
   {"id":"ey-kaash","title":"ای کاش","alternateTitle":"Ey Kaash · If Only","image":"https://img.youtube.com/vi/P9i5Nqz9EfM/hqdefault.jpg","link":"https://www.youtube.com/watch?v=P9i5Nqz9EfM","language":"Persian","featured":true},
