@@ -162,10 +162,10 @@ window.songCatalog = [
 
   {
     id: "ghashangtarin-dalil",
-    title: "قشنگترین دلیل",
-    alternateTitle: "Ghashangtarin Dalil",
+    title: "قشنگ‌ترین دلیل",
+    alternateTitle: "Qashangtarin Dalil",
     image: "images/ghashangtarin-dalil.jpg",
-    link: "https://distrokid.com/hyperfollow/minoolakani/--10?ref=release",
+    link: "https://www.youtube.com/watch?v=du96L0PgQCo",
     language: "Persian",
     featured: false
   },

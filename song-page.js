@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "begoo-mano-doost-dari.html": "https://www.youtube.com/watch?v=ficN_pDo5fA",
     "hese-naab.html": "https://www.youtube.com/watch?v=PPXv0jFVqnI",
     "rade-paye-to.html": "https://www.youtube.com/watch?v=XYZINlBfOHA",
-    "ghashangtarin-dalil.html": "https://www.youtube.com/watch?v=2sFA149pHDM",
+    "ghashangtarin-dalil.html": "https://www.youtube.com/watch?v=du96L0PgQCo",
     "khaterate-to.html": "https://www.youtube.com/watch?v=AvKesDc-OB8",
     "harfe-negah.html": "https://www.youtube.com/watch?v=-CQ_N-XT3XI",
   };
