@@ -39,7 +39,14 @@
 .custom-panel h3{font-family:inherit;font-size:clamp(1.3rem,3vw,1.8rem);line-height:1.45;margin:.1em 0 .45em}
 #request,#request-fa,#english,#persian{scroll-margin-top:95px}
 .custom-title-fa-line{display:block;font-family:Tahoma,Arial,sans-serif;font-size:clamp(1.5rem,3.4vw,3.1rem);line-height:1.5;letter-spacing:normal;margin-top:.32em;text-align:start}
+.custom-studio{width:100%;box-sizing:border-box;max-width:none;align-self:center}
+.custom-studio video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;background:#211610}
+.custom-studio figcaption{padding:8px;text-align:center}
+.custom-studio button{min-height:44px;cursor:pointer;font:inherit}
+.custom-studio button[hidden]{display:none}
+@media (min-width:721px){.custom-wrap > .custom-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
 </style>
+<script src="assets/custom-studio-four-butterflies.js" defer></script>
 </head>
 <body class="interior-page">
 <header class="site-header">
@@ -57,7 +64,11 @@
 <p>I’m taking inquiries for custom songs in English. Tell me a little about what you have in mind.</p>
 <div class="custom-actions"><a class="outline-link" href="#request">Request a custom song</a><a class="outline-link" href="https://www.youtube.com/watch?v=7u_SIbn5dvo">Hear my songwriting</a></div>
 </div>
-<figure class="custom-portrait"><img src="minoo-photo.webp" alt="Songwriter Minoo Lakani" width="736" height="920" decoding="async"></figure>
+<figure class="custom-portrait custom-studio">
+<video id="custom-studio-video" width="800" height="450" playsinline muted loop preload="metadata" poster="minoo-photo.webp" aria-label="Minoo Lakani in her studio, wearing a brown coat, with four moving butterflies"></video>
+<figcaption><button class="outline-link" id="custom-studio-toggle" type="button" hidden>Play studio motion</button></figcaption>
+<noscript><p>Enable JavaScript to play the studio clip.</p></noscript>
+</figure>
 </section>
 <div class="custom-panels">
 <section id="request" class="custom-panel" aria-labelledby="request-title">
