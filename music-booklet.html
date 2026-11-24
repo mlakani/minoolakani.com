@@ -103,7 +103,7 @@
     player.replaceChildren();open.hidden=!t.v;open.textContent='Open player here';open.setAttribute('aria-expanded','false');open.setAttribute('aria-controls','book-player');
     setLink(watch,t.v?'https://www.youtube.com/watch?v='+t.v:null);
     setLink(listen,t.a,t.a?.includes('spotify.com')?'Listen on Spotify':'Listen to official release');
-    setLink(details,t.s);
+    setLink(details,t.s,t.v==='du96L0PgQCo'?'Read the song story':'Song details');
     document.querySelector('#book-note').textContent=t.v?'The player only loads when you open it.':'This release is available through its official listening link.';
     if(animate){disc.classList.remove('turn');requestAnimationFrame(()=>requestAnimationFrame(()=>disc.classList.add('turn')));}
   }
