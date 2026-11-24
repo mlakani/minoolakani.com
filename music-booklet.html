@@ -38,6 +38,11 @@
 .book-main :focus-visible{outline:2px solid #f9d891;outline-offset:2px}
 @media(max-width:650px){.book-selected{grid-template-columns:minmax(0,1fr)}.book-intro{margin-bottom:22px}}
 @media(prefers-reduced-motion:no-preference){.disc.turn{animation:discTurn .46s ease-out 1}@keyframes discTurn{from{transform:rotate(-42deg)}to{transform:rotate(0)}}}
+.book-author-note{box-sizing:border-box;max-width:720px;margin:0 0 28px;padding:clamp(16px,3.8vw,28px);border:1px solid var(--book-line);border-radius:18px;background:#2f2118;color:var(--book-ink);line-height:1.9;text-align:start}
+.book-author-note h2{margin:0 0 .5em;color:var(--book-gold);font-size:clamp(1.25rem,4vw,1.7rem);line-height:1.45}
+.book-author-note p{margin:.55em 0}
+.book-author-note .book-note-sign{color:var(--book-gold)}
+.book-author-note .book-btn{margin-top:.35rem}
 </style></head>
 <body><header class="site-header">
     <a class="brand" href="/" aria-label="Minoo Lakani home"><img src="brand-logo-192.webp" width="58" height="58" alt=""><span><strong>Minoo Lakani</strong><small>Production</small></span></a>
@@ -45,6 +50,13 @@
     <nav class="nav" aria-label="Primary navigation"><a href="/">Home</a><a href="music.html">Music</a><a href="music-booklet.html" aria-current="page">Booklet</a><a href="videos.html">Videos</a><a href="about.html">About</a><a href="gallery.html">Gallery</a><a href="press-kit.html">Press</a><a href="contact.html">Contact</a></nav>
   </header><main class="book-main">
 <header class="book-intro"><p class="book-kicker">Minoo Lakani · Discography</p><h1>The Music Booklet</h1><p>Swipe through the discs, then tap one to open its player right here.</p></header>
+<section class="book-author-note" lang="fa" dir="rtl" aria-labelledby="book-author-heading">
+  <h2 id="book-author-heading">مقدمهٔ دفترچهٔ موسیقی</h2>
+  <p>این ترانه‌ها از لحظه‌های تلخ و شیرین زندگی می‌گن، از چیزهایی که هر کدوم‌مون به شکلی تجربه می‌کنیم. امیدوارم لابه‌لای این واژه‌ها ردّی از داستان خودتون پیدا کنید و شنیدن این ترانه‌ها بهتون آرامش بده یا لبخندی روی لبتون بنشونه.</p>
+  <p>اگه واژه‌ای از یه ترانه به دلتون نشست یا چیزی رو در زندگی‌تون عوض کرد، برام پیامک بفرستید. دوست دارم بدونم این ترانه‌ها کجای قصهٔ شما جا پیدا کردن.</p>
+  <p class="book-note-sign">با مهر، مینو لاکانی</p>
+  <a class="book-btn" href="sms:+17035879591">به مینو پیامک بفرستید</a>
+</section>
 <section class="book-sleeve" aria-label="CD collection">
 <div class="book-controls"><div class="book-buttons" aria-label="Filter by language"><button type="button" class="book-btn" data-lang="All" aria-pressed="true">All</button><button type="button" class="book-btn" data-lang="Persian" aria-pressed="false">Persian</button><button type="button" class="book-btn" data-lang="English" aria-pressed="false">English</button><button type="button" class="book-btn" data-lang="Spanish" aria-pressed="false">Spanish</button></div><p id="book-count" aria-live="polite">33 songs</p></div>
 <div class="book-shelf" id="book-shelf" role="region" aria-label="Swipeable discs" tabindex="0">
@@ -103,7 +115,7 @@
     player.replaceChildren();open.hidden=!t.v;open.textContent='Open player here';open.setAttribute('aria-expanded','false');open.setAttribute('aria-controls','book-player');
     setLink(watch,t.v?'https://www.youtube.com/watch?v='+t.v:null);
     setLink(listen,t.a,t.a?.includes('spotify.com')?'Listen on Spotify':'Listen to official release');
-    setLink(details,t.s,t.v==='du96L0PgQCo'?'Read the song story':'Song details');
+    setLink(details,t.s);
     document.querySelector('#book-note').textContent=t.v?'The player only loads when you open it.':'This release is available through its official listening link.';
     if(animate){disc.classList.remove('turn');requestAnimationFrame(()=>requestAnimationFrame(()=>disc.classList.add('turn')));}
   }
