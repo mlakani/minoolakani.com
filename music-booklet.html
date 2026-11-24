@@ -30,6 +30,7 @@
 .book-selected h2{font-size:clamp(1.5rem,5vw,3rem);margin:.24em 0 .55em;line-height:1.2;overflow-wrap:anywhere}
 .book-selected .book-kicker{margin:0}
 .book-player{min-width:0}
+.book-selected,.book-player{scroll-margin-block:90px 18px}
 .book-player:empty{display:none}
 .book-player iframe{display:block;width:100%;height:auto;aspect-ratio:16/9;border:0;border-radius:12px;background:#0b0908}
 .book-note{margin:13px 0 0;color:var(--book-muted);font-size:.93rem}
@@ -43,7 +44,7 @@
     <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav class="nav" aria-label="Primary navigation"><a href="/">Home</a><a href="music.html">Music</a><a href="music-booklet.html" aria-current="page">Booklet</a><a href="videos.html">Videos</a><a href="about.html">About</a><a href="gallery.html">Gallery</a><a href="press-kit.html">Press</a><a href="contact.html">Contact</a></nav>
   </header><main class="book-main">
-<header class="book-intro"><p class="book-kicker">Minoo Lakani · Discography</p><h1>The Music Booklet</h1><p>Swipe through the discs, pick a song, and open its player right here.</p></header>
+<header class="book-intro"><p class="book-kicker">Minoo Lakani · Discography</p><h1>The Music Booklet</h1><p>Swipe through the discs, then tap one to open its player right here.</p></header>
 <section class="book-sleeve" aria-label="CD collection">
 <div class="book-controls"><div class="book-buttons" aria-label="Filter by language"><button type="button" class="book-btn" data-lang="All" aria-pressed="true">All</button><button type="button" class="book-btn" data-lang="Persian" aria-pressed="false">Persian</button><button type="button" class="book-btn" data-lang="English" aria-pressed="false">English</button><button type="button" class="book-btn" data-lang="Spanish" aria-pressed="false">Spanish</button></div><p id="book-count" aria-live="polite">33 songs</p></div>
 <div class="book-shelf" id="book-shelf" role="region" aria-label="Swipeable discs" tabindex="0">
@@ -106,7 +107,14 @@
     document.querySelector('#book-note').textContent=t.v?'The player only loads when you open it.':'This release is available through its official listening link.';
     if(animate){disc.classList.remove('turn');requestAnimationFrame(()=>requestAnimationFrame(()=>disc.classList.add('turn')));}
   }
-  buttons.forEach((b,i)=>b.addEventListener('click',()=>select(i,true)));
+  function reveal(target){
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    target.scrollIntoView({block:'nearest',inline:'nearest',behavior:reduced?'instant':'smooth'});
+  }
+  buttons.forEach((b,i)=>b.addEventListener('click',()=>{
+    if(selected!==i)select(i,true);
+    if(!showPlayer())reveal(title.closest('.book-selected'));
+  }));
   filters.forEach(b=>b.addEventListener('click',()=>{
     const l=b.dataset.lang;filters.forEach(f=>f.setAttribute('aria-pressed',String(f===b)));
     buttons.forEach((button,i)=>button.hidden=l!=='All'&&tracks[i].l!==l);
@@ -114,13 +122,20 @@
     document.querySelector('#book-count').textContent=visible.length+(visible.length===1?' song':' songs');
     shelf.scrollLeft=0;if(buttons[selected].hidden)select(Number(visible[0].dataset.track),false);
   }));
-  open.addEventListener('click',()=>{
-    if(player.childElementCount){player.replaceChildren();open.textContent='Open player here';open.setAttribute('aria-expanded','false');return;}
-    const t=tracks[selected];if(!t.v)return;
+  function showPlayer(){
+    const t=tracks[selected];if(!t.v)return false;
+    if(!player.childElementCount){
     const f=document.createElement('iframe');f.title=t.t+' by Minoo Lakani';f.src='https://www.youtube-nocookie.com/embed/'+t.v+'?playsinline=1';
     f.allow='encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;
     f.referrerPolicy='strict-origin-when-cross-origin';player.append(f);
     open.textContent='Close player';open.setAttribute('aria-expanded','true');
+    }
+    reveal(player);
+    return true;
+  }
+  open.addEventListener('click',()=>{
+    if(player.childElementCount){player.replaceChildren();open.textContent='Open player here';open.setAttribute('aria-expanded','false');return;}
+    showPlayer();
   });
   select(0,false);
   const menu=document.querySelector('.menu-toggle'), nav=document.querySelector('.nav');
